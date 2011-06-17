@@ -18,7 +18,7 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="3.0.7" bound="EQUAL" git="false" path="false" doRequire="true" />
+        <dependency name="rails" version="3.0.8" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -96,6 +96,22 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.0.1, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-mocks-2.0.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.0.1, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-2.0.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.0.1, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-expectations-2.0.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] webrat (v0.7.3, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/webrat-0.7.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-rails (v2.6.1, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-rails-2.6.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.6.0, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.6.0, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-expectations-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.6.0, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.6.0, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-mocks-2.6.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.6.4, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] tzinfo (v0.3.28, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/tzinfo-0.3.28)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/rails-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/activeresource-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/activemodel-3.0.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.8, /home/diego/.rvm/gems/ruby-1.9.2-p180/gems/actionmailer-3.0.8)" level="application" />
   </component>
 </module>
 
