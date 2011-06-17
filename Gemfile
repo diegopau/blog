@@ -7,6 +7,7 @@ gem 'rails', '3.0.8'
 
 gem 'sqlite3', '1.3.3'
 
+
 gem 'rake', '0.9.2'
 
 group :development do
