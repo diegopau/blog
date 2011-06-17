@@ -5,18 +5,18 @@ gem 'rails', '3.0.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'sqlite3', '1.3.3'
 
-gem 'rake'
+gem 'rake', '0.9.2'
 
 group :development do
-  gem 'rspec-rails'
-  gem 'annotate-models'
+  gem 'rspec-rails', '2.6.1'
+  gem 'annotate-models', '1.0.4'
 end
 
 group :test do
-  gem 'rspec'
-  gem 'webrat'
+  gem 'rspec', '2.6.0'
+  gem 'webrat', '0.7.3'
 end
 
 # Use unicorn as the web server
