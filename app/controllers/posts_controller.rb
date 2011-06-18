@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
+
+  uses_tiny_mce
+
   def index
     @posts = Post.all
 
@@ -35,6 +38,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+
   end
 
   # POST /posts

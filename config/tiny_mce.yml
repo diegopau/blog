@@ -1,0 +1,11 @@
+# Here you can specify default options for TinyMCE across all controllers
+#
+# theme: advanced
+# plugins:
+#  - table
+#  - fullscreen
+
+plugins: [ paste ]
+paste_auto_cleanup_on_paste: true
+paste_convert_middot_lists: false
+paste_convert_headers_to_strong: true

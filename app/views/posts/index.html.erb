@@ -8,7 +8,7 @@
 
         <div class = "post">
           <div class = "post_title"> <h2><%= post.title %></h2> </div>
-          <div class = "post_body text_base"><%= post.body %></div>
+          <div class = "post_body text_base"><%= post.body.html_safe %></div>
           <br>
           <div class="post_date"><%= post.published_at %></div>
           <div class="post_admin_controls"><%= link_to 'Show', post %>  <%= link_to 'Edit', edit_post_path(post) %>  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></div>
