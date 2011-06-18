@@ -1,12 +1,14 @@
 Blog::Application.routes.draw do
 
+  resources :posts
+
   get "basic_pages/home"
 
   get "basic_pages/contact"
 
   get "basic_pages/about_me"
 
-  root :to => 'basic_pages#home'
+  root :to => 'posts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

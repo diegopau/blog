@@ -1,0 +1,35 @@
+.text_base { /* Tamaño y formato basico del texto del blog */
+    font-size:14px;
+}
+
+#posts {
+    margin-left:40px;
+}
+
+.post {
+
+}
+
+.post_title{
+
+
+}
+
+.post_body{
+
+
+}
+
+.post_date{
+
+
+}
+
+.post_admin_controls{
+
+
+}
+
+.space_between_posts{
+   height:36px;
+}
