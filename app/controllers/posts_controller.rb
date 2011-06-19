@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   uses_tiny_mce
 
   def index
-    @posts = Post.all
+    @posts = Post.all(:order => 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
