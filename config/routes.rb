@@ -10,6 +10,8 @@ Blog::Application.routes.draw do
 
   root :to => 'posts#index'
 
+  match '/auth/:provider/callback', :to => 'sessions#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

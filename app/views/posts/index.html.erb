@@ -14,6 +14,17 @@
           <div class="post_admin_controls"><%= link_to 'Show', post %>  <%= link_to 'Edit', edit_post_path(post) %>  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></div>
         </div>
 
+
+        <div class = "comments">
+
+            <% post.comments.each do |comment| %>
+                <div class = "comment">
+                    <div class = "comment_user_name"> </div>
+                    <div class = "comment_date"> </div>
+                    <div class = "comment_content"> </div>
+                </div>
+        </div>
+
         <div class = "space_between_posts"> </div>
 
     <% end %>

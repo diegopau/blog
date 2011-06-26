@@ -8,6 +8,7 @@ gem 'rails', '3.0.8'
 gem 'sqlite3', '1.3.3'
 gem 'rake', '0.9.2'
 gem 'tiny_mce', '0.1.4'
+gem 'omniauth', '0.2.6'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
