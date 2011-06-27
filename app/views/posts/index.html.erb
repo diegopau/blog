@@ -1,6 +1,6 @@
 <h1>Diego Pau Blog</h1>
 
-<div class="left_colum span-14">
+<div class="left_column span-14">
 
   <div id = "posts">
 
@@ -17,11 +17,15 @@
 
         <div class = "comments">
 
+            <%-# AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post -%>
+
+            <%= render :partial => 'comment_form', :locals => { :post => post.id } %>
+
             <% post.comments.each do |comment| %>
                 <div class = "comment">
-                    <div class = "comment_user_name"> </div>
-                    <div class = "comment_date"> </div>
-                    <div class = "comment_content"> </div>
+                    <div class = "comment_user_name"> <%= comment.user_name %></div>
+                    <div class = "comment_date"> <%= comment.web_page %> </div>
+                    <div class = "comment_content"> <%= comment.contenido %> </div>
                 </div>
             <% end %>
         </div>

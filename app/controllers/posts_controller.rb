@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
 
-  uses_tiny_mce
+  uses_tiny_mce :only => [:new, :create, :edit, :update]   # gracias a :only se va a cargar solo donde se necesita y se cargan menos archivos
 
   def index
     @posts = Post.all(:order => 'created_at DESC')
-
+    @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

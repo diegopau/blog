@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
 
+  resources :comments
+
   resources :posts
 
   get "basic_pages/home"

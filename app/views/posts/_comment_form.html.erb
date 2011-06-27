@@ -1,0 +1,44 @@
+<hr/>
+<p>
+    Introduce un comentario:
+</p>
+
+
+<%- # Este formulario envia al controlador de comments los siguientes parametros para crear un objeto tipo comment (aunque estamos en una vista perteneciente a posts form_for envia el formulario a la función create dentro del controlador de comments)): -%>
+<%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}  -%>
+
+<%= form_for @comment do |f| %>
+    <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+          <ul>
+            <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%- # Gracias al parametro value le paso un valor concreto al hidden field.. de forma que va a recibir el parametro :post_id = una_id_de_un_post  -%>
+    <%= f.hidden_field :post_id, :value => post %>
+
+    <p>
+      <%= f.label :name %><br/>
+      <%= f.text_field :user_name %>
+    </p>
+
+    <p>
+      <%= f.label :web_page %><br/>
+      <%= f.text_field :web_page %>
+    </p>
+
+    <p>
+      <%= f.label :contenido %><br/>
+      <%= f.text_area :contenido %>
+    </p>
+
+    <p>
+      <%= f.submit "Post Comment" %>
+    </p>
+<% end %>
