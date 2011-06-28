@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def signed_in?
-    !!current_user
+    !!current_user  # el !! se utiliza para comprobar si existe el current_user (sin los !! se comprobaría si es true o false, pero se quiere comprobar si existe o no existe)
   end
 
   helper_method :current_user, :signed_in?

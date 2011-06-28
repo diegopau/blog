@@ -1,11 +1,22 @@
 <hr/>
-<p>
+<h3>
     Introduce un comentario:
-</p>
+</h3>
 
 
 <%- # Este formulario envia al controlador de comments los siguientes parametros para crear un objeto tipo comment (aunque estamos en una vista perteneciente a posts form_for envia el formulario a la función create dentro del controlador de comments)): -%>
 <%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}  -%>
+
+ <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
+
+ <div class = "providers_buttons">
+    <h4> Autenticarse con:</h4>
+    <p> Facebook:  <%= link_to 'Login', '/auth/facebook' %></p>
+    <p> Twitter:  <%= link_to 'Login', '/auth/twitter' %></p>
+    <p> Linkedin:  <%= link_to 'Login', '/auth/linked_in' %></p>
+ </div>
+
+
 
 <%= form_for @comment do |f| %>
     <% if @comment.errors.any? %>
