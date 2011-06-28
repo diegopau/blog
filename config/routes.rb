@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
 
+  devise_for :admin_users
+
   resources :comments
 
   resources :posts

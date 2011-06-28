@@ -9,6 +9,8 @@ gem 'sqlite3', '1.3.3'
 gem 'rake', '0.9.2'
 gem 'tiny_mce', '0.1.4'
 gem 'omniauth', '0.2.6'
+gem 'devise' # Devise must be required before RailsAdmin
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
