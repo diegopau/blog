@@ -1,8 +1,33 @@
-<h1>Diego Pau Blog</h1>
+<div class="cabecera span-24 last">
+  <h1>Diego Pau Blog</h1>
+</div>
 
-<div class="left_column span-14">
 
-  <div id = "posts">
+<div class="cuerpo span-24 last">
+
+  <div class="left_column span-4">
+
+    <div id="ficha">
+      <div id = "foto"> dsfgsd</div>
+      <div id = "descripcion">dfsg </div>
+    </div>
+
+    <div id = "buscador">
+
+    </div>
+
+    <div id = "categorias">
+
+    </div>
+
+    <div id = "archivo">
+
+    </div>
+
+  </div>
+
+
+  <div class = "posts span-15">
 
     <% @posts.each do |post| %>
 
@@ -16,21 +41,25 @@
 
         <div class = "comments">
 
-            <%-# AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post -%>
-            <%= render :partial => 'comment_form', :locals => { :post => post.id } %>
+          <%-# AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post -%>
+          <%= render :partial => 'comment_form', :locals => { :post => post.id } %>
 
-            <% post.comments.each do |comment| %>
-                <div class = "comment">
-                    <div class = "comment_user_name"> <%= comment.user_name %></div>
-                    <div class = "comment_date"> <%= comment.web_page %> </div>
-                    <div class = "comment_content"> <%= comment.contenido %> </div>
-                </div>
-            <% end %>
+          <% post.comments.each do |comment| %>
+              <div class = "comment">
+                <div class = "comment_user_name"> <%= comment.user_name %></div>
+                <div class = "comment_date"> <%= comment.web_page %> </div>
+                <div class = "comment_content"> <%= comment.contenido %> </div>
+              </div>
+          <% end %>
         </div>
 
         <div class = "space_between_posts"> </div>
 
     <% end %>
+  </div>
+
+  <div class="right_column span-5 last">
+    dfgsfs
   </div>
 
 </div>
