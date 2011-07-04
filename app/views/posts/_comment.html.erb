@@ -1,0 +1,12 @@
+<%-#  -%>
+<div id="comment_<%=comment.post.id%>_<%=comment.id%>">
+    <span class="dateandoptions">
+        Posted <%= time_ago_in_words(comment.created_at) %> ago<br/>
+        <%= link_to 'Delete', {:controller => 'comments', :action => 'eliminar', :id => comment.id, :post_id => comment.post.id}, :method => :post, :remote => true %>
+    </span>
+    <p><b><%= comment.user_name %></b> wrote:</p>
+    <br/>
+    <% if comment.web_page != nil %> <p><b> Webpage:</b><%= comment.web_page %></p> <% end %>
+    <br/>
+    <%= content_tag(:p, comment.contenido, :class => "comment-body") %>
+</div>

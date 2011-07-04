@@ -29,13 +29,13 @@ body {
 }
 
 .posts{
-
+    padding-left: 15px;
+    padding-right: 25px;
 }
 
 
 .post {
-    padding-left: 15px;
-    padding-right: 25px;
+
 }
 
 .post_title{
@@ -50,6 +50,10 @@ body {
 
 .post_date{
 
+
+}
+
+.comments{
 
 }
 

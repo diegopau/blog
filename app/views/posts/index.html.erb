@@ -38,19 +38,18 @@
           <div class="post_date"><%= post.created_at %></div>
         </div>
 
+        <div class = "comments" id = "comments_<%= post.id %>">
 
-        <div class = "comments">
+          <span class="comments_count" id="comments_count_<%= post.id %>"> <%= pluralize(post.comments.count, "Comment") %></span>
 
-          <%-# AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post -%>
-          <%= render :partial => 'comment_form', :locals => { :post => post.id } %>
+          <%= render :partial => 'comment', :collection => post.comments %>
 
-          <% post.comments.each do |comment| %>
-              <div class = "comment">
-                <div class = "comment_user_name"> <%= comment.user_name %></div>
-                <div class = "comment_date"> <%= comment.web_page %> </div>
-                <div class = "comment_content"> <%= comment.contenido %> </div>
-              </div>
-          <% end %>
+          <div id="comment-notice_<%= post.id %>"></div>
+          <div class="comment_form">
+            <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post  -%>
+            <%= render :partial => 'comment_form', :locals => {:post => post.id} %>
+          </div>
+
         </div>
 
         <div class = "space_between_posts"> </div>
