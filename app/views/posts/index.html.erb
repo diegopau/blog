@@ -44,12 +44,13 @@
 
           <%= render :partial => 'comment', :collection => post.comments %>
 
-          <div id="comment-notice_<%= post.id %>"></div>
-          <div class="comment_form">
-            <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post  -%>
-            <%= render :partial => 'comment_form', :locals => {:post => post.id} %>
-          </div>
+        </div>
 
+        <div id="comment-notice_<%= post.id %>"></div>
+
+        <div class="comment_form">
+          <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post   -%>
+          <%= render :partial => 'comment_form', :locals => {:post => post.id} %>
         </div>
 
         <div class = "space_between_posts"> </div>
