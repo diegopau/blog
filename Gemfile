@@ -10,7 +10,8 @@ gem 'rake', '0.9.2'
 gem 'tiny_mce', '0.1.4'
 gem 'omniauth', '0.2.6'
 gem 'devise' # Devise must be required before RailsAdmin
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO QUE HACE QUE SE JODA EL BOTON "STOP" AL QUERER PARAR EL SERVIDOR, TB DEJA DE FUNCIONAR CTRL+C, SI SIGUE PASANDO MIRAR SI ELIMINARLO O INTENTAR ACTUALIZARLO
+gem 'jquery-rails', '1.0.12'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

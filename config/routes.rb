@@ -4,6 +4,8 @@ Blog::Application.routes.draw do
 
   resources :comments
 
+  match '/comments/:id/:post_id', :to => 'comments#eliminar'
+
   resources :posts
 
   get "basic_pages/home"

@@ -12,5 +12,5 @@
 #
 
 class Post < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, :dependent => :destroy # con :dependent indicamos que si un post se eliminan tb se eliminan todos sus comentarios
 end
