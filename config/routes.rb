@@ -8,11 +8,11 @@ Blog::Application.routes.draw do
 
   resources :posts
 
-  get "basic_pages/home"
+  match '/tags/:tag', :to => 'posts#search_result'
 
-  get "basic_pages/contact"
+  match '/about_me', :to => 'basic_pages#about_me'
 
-  get "basic_pages/about_me"
+  match '/contact', :to => 'basic_pages#contact'
 
   root :to => 'posts#index'
 

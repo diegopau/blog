@@ -6,7 +6,19 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all(:order => 'created_at DESC')
+    @tags = Tag.all
     @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @posts }
+    end
+  end
+
+  def search_result
+    @posts = Post.all(:include => :tags, :conditions => ["tags.id = ?", params[:tag]]) # Es importante el :include, ya que en este caso posts has many tags.. y si no pones el include no hace la busqueda dentro de los tags tb.
+    @tags = Tag.all
+    @tag = params[:tag]
+    @comment = Comment.new()
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

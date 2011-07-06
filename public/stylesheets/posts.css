@@ -28,6 +28,15 @@ body {
     padding-right: 25px;
 }
 
+#tags{
+   padding-left: 15px;
+   padding-right: 25px;
+}
+
+#tags ul{
+    list-style-type: none
+}
+
 .posts{
     padding-left: 15px;
     padding-right: 25px;
@@ -59,4 +68,18 @@ body {
 
 .space_between_posts{
    height:36px;
+}
+
+.selected_tag{
+   font-weight: bold;
+   font-size: 16px;
+
+}
+
+#buscador{
+   padding-left: 15px;
+}
+
+#archivo{
+   padding-left: 15px;
 }

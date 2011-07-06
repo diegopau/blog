@@ -1,0 +1,12 @@
+<p>Tags:</p>
+<ul>
+  <% @tags.each do |tag| %>
+
+      <% if tag.id.to_s() == @tag %>
+          <% puts "passssssssssssoooooooooo" %>
+         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.id}, :class => "selected_tag" %> </li>
+      <% else %>
+         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.id} %> </li>
+      <% end %>
+  <% end %>
+</ul>
