@@ -86,11 +86,17 @@
 }
 
 .new_comment .name_field input{
+         width: 150px;
+
 }
 
 .new_comment .web_page_field{
     float: left;
     width: 300px;
+}
+
+.new_comment .web_page_field input {
+     width: 200px;
 }
 
 .new_comment .comment_field{
