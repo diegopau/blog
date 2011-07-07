@@ -8,7 +8,7 @@
   <div class="left_column span-4">
 
     <div id="ficha">
-      <div id = "foto"> <%=image_tag("diegopau.jpg", :width => "110px") %></div>
+      <div id = "foto"> <%=image_tag("diegopau.jpg", :width => "108px", :id => "imagen_foto") %></div>
       <div id = "descripcion"> <%= link_to "About me", {:controller=>'basic_pages', :action =>'about_me'} %>  </div>
     </div>
 
@@ -29,9 +29,9 @@
 
         <div class = "post">
           <div class = "post_title"> <h2><%= post.title %></h2> </div>
+          <div class="post_date"><%= post.created_at.to_s(:long) %></div>
           <div class = "post_body text_base"><%= post.body.html_safe %></div>
           <br>
-          <div class="post_date"><%= post.created_at %></div>
         </div>
 
         <div class = "comments" id = "comments_<%= post.id %>">
@@ -49,7 +49,7 @@
           <%= render :partial => 'comment_form', :locals => {:post => post.id} %>
         </div>
 
-        <div class = "space_between_posts"> </div>
+        <div class = "space_between_posts"> &nbsp;</div>
 
     <% end %>
   </div>

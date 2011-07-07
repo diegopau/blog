@@ -1,42 +1,3 @@
-body {
-    /* Aqui hay un truquillo, por una parte se carga una imgaen con la cabezera y parte del fondo.. pero como el fondo hacia abajo no tiene un limite definido se le pone un color de fondo igual al color de fondo de la imagen */
-    background: #EFEDEA url(/images/fondo.png) 0 0 repeat-x;
-}
-
-.text_base { /* Tamaño y formato basico del texto del blog */
-    font-size:14px;
-}
-
-.cabecera {
-    margin-top: 20px;
-    height: 60px;
-    margin-bottom: 20px;
-}
-
-.cuerpo{
-   padding-top: 20px;
-   background-color: #FFF;
-
-}
-
-.left_column{
-
-}
-
-#ficha{
-    padding-left: 15px;
-    padding-right: 25px;
-}
-
-#tags{
-   padding-left: 15px;
-   padding-right: 25px;
-}
-
-#tags ul{
-    list-style-type: none
-}
-
 .posts{
     padding-left: 15px;
     padding-right: 25px;
@@ -44,42 +5,111 @@ body {
 
 
 .post {
+    float:left;
+}
 
+.post h2{
+    margin: 0;
+    color: black;
 }
 
 .post_title{
+    width: 550px;
+    float: left;
+    height: 40px;
 
+}
+
+.post_date {
+    width: 550px;
+    float: left;
+    height: 25px;
+    padding-bottom: 10px;
 
 }
 
 .post_body{
-
-
-}
-
-.post_date{
-
+    width: 550px;
+    float: left;
 
 }
 
 .comments{
-
+    width: 550px;
+    float: left;
 }
 
 .space_between_posts{
-   height:36px;
+   float: left;
+   height:50px;
+    width: 550px;
+    border-top:solid 1px;
+    border-color: lightgray;
 }
 
-.selected_tag{
-   font-weight: bold;
-   font-size: 16px;
+.providers_buttons {
+    width: 550px;
+    float:left;
+}
+
+.autenticate_con{
+    padding-left: 20px;
+      float:left;
+      font-size: 15px;
+      width: 120px;
 
 }
 
-#buscador{
-   padding-left: 15px;
+.provider_button{
+    float:left;
+    width: 40px;
 }
 
-#archivo{
-   padding-left: 15px;
+.comment_form {
+    float: left;
+    padding-bottom:20px;
+}
+
+.new_comment{
+    float:left;
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.new_comment .name_field{
+    float:left;
+    width: 230px;
+}
+
+.new_comment .name_field label{
+}
+
+.new_comment .name_field input{
+}
+
+.new_comment .web_page_field{
+    float: left;
+    width: 300px;
+}
+
+.new_comment .comment_field{
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.new_comment .comment_field label{
+    float: left;
+}
+
+.new_comment .comment_field textarea {
+    float: left;
+    height: 100px;
+    width: 490px;
+    padding: 5px;
+}
+
+.new_comment .submit_button{
+    float: left;
 }

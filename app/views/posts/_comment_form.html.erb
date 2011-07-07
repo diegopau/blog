@@ -1,4 +1,3 @@
-<hr/>
 <h3>
     Introduce un comentario:
 </h3>
@@ -10,10 +9,10 @@
  <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
  <div class = "providers_buttons">
-    <h4> Autenticarse con:</h4>
-    <p> Facebook:  <%= link_to 'Login', '/auth/facebook' %></p>
-    <p> Twitter:  <%= link_to 'Login', '/auth/twitter' %></p>
-    <p> Linkedin:  <%= link_to 'Login', '/auth/linked_in' %></p>
+    <div class = "autenticate_con"> Autenticate con:</div>
+    <div class = "provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
+    <div class = "provider_button"> <%= link_to image_tag("twitter_button.png", :width => "30x30"), '/auth/twitter' %></div>
+    <div class = "provider_button"> <%= link_to image_tag("linkedin_button.png", :width => "30x30"), '/auth/linked_in' %></div>
  </div>
 
 
@@ -34,22 +33,23 @@
     <%- # Gracias al parametro value le paso un valor concreto al hidden field.. de forma que va a recibir el parametro :post_id = una_id_de_un_post  -%>
     <%= f.hidden_field :post_id, :value => post %>
 
-    <p>
-      <%= f.label :name %><br/>
-      <%= f.text_field :user_name %>
-    </p>
+    <div class="name_field">
+      <%= f.label :name %>:&nbsp;&nbsp;
+      <%= f.text_field :user_name, :size => "15px" %>
+    </div>
 
-    <p>
-      <%= f.label :web_page %><br/>
-      <%= f.text_field :web_page %>
-    </p>
+    <div class="web_page_field">
+      <%= f.label :web_page %>:&nbsp;&nbsp;
+      <%= f.text_field :web_page, :size => "20px" %>
+    </div>
 
-    <p>
-      <%= f.label :contenido %><br/>
+    <div class="comment_field">
+      <%= f.label :contenido %>:<br>
       <%= f.text_area :contenido %>
-    </p>
+    </div>
 
-    <p>
+    <div class="submit_button">
       <%= f.submit "Post Comment" %>
-    </p>
+    </div>
+
 <% end %>

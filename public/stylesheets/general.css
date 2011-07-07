@@ -1,0 +1,111 @@
+body {
+    /* Aqui hay un truquillo, por una parte se carga una imgaen con la cabezera y parte del fondo.. pero como el fondo hacia abajo no tiene un limite definido se le pone un color de fondo igual al color de fondo de la imagen */
+    background-color: #EFEDEA;
+}
+
+.text_base {
+    /* Tamaño y formato basico del texto del blog */
+    font-size: 14px;
+}
+
+.cabecera_vacia{
+    height: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cabecera {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    height: 40px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.cabecera_idioma{
+    height: 40px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cabecera h1 {
+    margin: 0;
+    text-align: left;
+
+}
+
+.cuerpo {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    background-color: #FFF;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.left_column {
+}
+
+#ficha {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#foto {
+}
+
+#imagen_foto {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+}
+
+#tags {
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+#tags ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.selected_tag {
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.right_column{
+
+}
+
+#buscador {
+    padding-left: 10px;
+}
+
+#archivo {
+    padding-left: 10px;
+}
+
