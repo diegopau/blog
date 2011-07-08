@@ -9,6 +9,7 @@ Blog::Application.routes.draw do
   resources :posts
 
   match '/tags/:tag', :to => 'posts#search_result'
+  match '/language/:idioma', :to => 'posts#search_result'
 
   match '/about_me', :to => 'basic_pages#about_me'
 

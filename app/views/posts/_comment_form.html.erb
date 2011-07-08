@@ -9,10 +9,17 @@
  <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
  <div class = "providers_buttons">
-    <div class = "autenticate_con"> Autenticate con:</div>
-    <div class = "provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
-    <div class = "provider_button"> <%= link_to image_tag("twitter_button.png", :width => "30x30"), '/auth/twitter' %></div>
-    <div class = "provider_button"> <%= link_to image_tag("linkedin_button.png", :width => "30x30"), '/auth/linked_in' %></div>
+    <% if signed_in? %>
+        <%- # TODO: tambies es necesario un sign out, una vez estas logueado -%>
+       <div class = "logged_with"> You are signed in with <%= current_user.authorization.provider %>, leave your answer below: </div>
+
+    <% else %>
+       <div class="autenticate_con"> Autenticate con:</div>
+       <div class="provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
+       <div class="provider_button"> <%= link_to image_tag("twitter_button.png", :width => "30x30"), '/auth/twitter' %></div>
+       <div class="provider_button"> <%= link_to image_tag("linkedin_button.png", :width => "30x30"), '/auth/linked_in' %></div>
+    <% end %>
+
  </div>
 
 
@@ -33,18 +40,26 @@
     <%- # Gracias al parametro value le paso un valor concreto al hidden field.. de forma que va a recibir el parametro :post_id = una_id_de_un_post  -%>
     <%= f.hidden_field :post_id, :value => post %>
 
-    <div class="name_field">
-      <%= f.label :name %>:&nbsp;&nbsp;
-      <%= f.text_field :user_name %>
-    </div>
+    <%- # TODO: caso en el que un usuario se autentica para dejar un comentario -%>
+    <% if signed_in? %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+    <% end %>
 
-    <div class="web_page_field">
-      <%= f.label :web_page %>:&nbsp;&nbsp;
-      <%= f.text_field :web_page %>
-    </div>
+    <% if not signed_in? %>
+        <div class="name_field">
+          <%= f.label :name %>:&nbsp;&nbsp;
+          <%= f.text_field :user_name %>
+        </div>
+    <% end %>
+
+    <% if not signed_in? %>
+        <div class="web_page_field">
+          <%= f.label :web_page %>:&nbsp;&nbsp;
+          <%= f.text_field :web_page %>
+        </div>
+    <% end %>
 
     <div class="comment_field">
-      <%= f.label :contenido %>:<br>
       <%= f.text_area :contenido %>
     </div>
 

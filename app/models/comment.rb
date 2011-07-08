@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110626115058
+# Schema version: 20110707124752
 #
 # Table name: comments
 #
@@ -8,6 +8,7 @@
 #  web_page     :string(255)
 #  contenido    :text
 #  post_id      :integer
+#  user_id      :integer
 #  published_at :datetime
 #  created_at   :datetime
 #  updated_at   :datetime

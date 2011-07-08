@@ -5,6 +5,8 @@ class CreatePosts < ActiveRecord::Migration
       t.text :body
       t.datetime :published_at
 
+      t.integer :idioma_id
+
       t.timestamps
     end
   end

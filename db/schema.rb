@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110705222205) do
+ActiveRecord::Schema.define(:version => 20110708132857) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -43,7 +43,14 @@ ActiveRecord::Schema.define(:version => 20110705222205) do
     t.string   "web_page"
     t.text     "contenido"
     t.integer  "post_id"
+    t.integer  "user_id"
     t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "idiomas", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20110705222205) do
     t.string   "title"
     t.text     "body"
     t.datetime "published_at"
+    t.integer  "idioma_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,7 +84,6 @@ ActiveRecord::Schema.define(:version => 20110705222205) do
 
   create_table "tags", :force => true do |t|
     t.string   "name"
-    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -85,8 +92,10 @@ ActiveRecord::Schema.define(:version => 20110705222205) do
     t.string   "name"
     t.string   "email"
     t.string   "website"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
   end
 
 end

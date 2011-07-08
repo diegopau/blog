@@ -1,5 +1,16 @@
-<div class="cabecera span-24 last">
-  <h1>Diego Pau Blog</h1>
+<div class="cabecera_vacia span-4">&nbsp;
+</div>
+
+<div class="cabecera span-14">
+  <h1><%= link_to "Diego Pau Blog", root_path %> </h1>
+</div>
+
+<%- # IMPORTANTE, LOS OBJETOS ESPANHOL E INGLES PARA LOS IDIOMAS HAY QUE CREARLOS MANUALMENTE CON RAILS_ADMIN EN CASO DE RESETEAR LA BASE DE DATOS %>
+
+<div class="cabecera_idioma span-5 last">
+  Ver posts en:
+  <div id="espanhol"><%=link_to "Español", {:controller => 'posts', :action => 'search_result', :idioma => "espanhol"} %></div>
+  <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :idioma => "english"} %></div>
 </div>
 
 
@@ -42,7 +53,7 @@
 
         </div>
 
-        <div id="comment-notice_<%= post.id %>"></div>
+        <div id="comment-notice_<%= post.id %>" class="notificacion_de_comentario"></div>
 
         <div class="comment_form">
           <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post   -%>

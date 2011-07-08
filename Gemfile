@@ -7,20 +7,25 @@ gem 'rails', '3.0.8'
 
 gem 'sqlite3', '1.3.3'
 gem 'rake', '0.9.2'
-gem 'tiny_mce', '0.1.4'
-gem 'omniauth', '0.2.6'
+gem 'omniauth', '0.2.6'  #para autenticacion con facebook, twitter, etc...
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO QUE HACE QUE SE JODA EL BOTON "STOP" AL QUERER PARAR EL SERVIDOR, TB DEJA DE FUNCIONAR CTRL+C, SI SIGUE PASANDO MIRAR SI ELIMINARLO O INTENTAR ACTUALIZARLO
 gem 'jquery-rails', '1.0.12'
+gem 'paperclip', '2.3.13' # para manegar archivos adjuntos, principalmente imagenes.
+
 
 group :development do
   gem 'rspec-rails', '2.6.1'
-  gem 'annotate-models', '1.0.4'
+  gem 'annotate-models', '1.0.4' #se ejecuta annotate nombre_modelo y le mete en el modelo información sobre la tabla de la base de datos que representa
 end
 
 group :test do
   gem 'rspec', '2.6.0'
   gem 'webrat', '0.7.3'
+end
+
+group :production do
+  gem 'geoip-rails'  # Para saber, a partir de su IP cual es el pais (o incluso ciudad) de origen de una persona
 end
 
 # Use unicorn as the web server
