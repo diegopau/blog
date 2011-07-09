@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-      session[:user_id] = nil
+      session[:user_id] = nil #esta variable session parece ser algo interno, perteneciente al ActionController
 
       # TODO: esto deberia redireccionar al correspondiente post y comment_form.
       respond_to do |format|
