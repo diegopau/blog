@@ -11,4 +11,14 @@ class SessionsController < ApplicationController
     # Una vez creada la sesion se redirecciona al indice de posts (esto hay que cambiarlo)
     redirect_to(posts_url, :notice => 'Te has logueado')
   end
+
+  def destroy
+      session[:user_id] = nil
+
+      # TODO: esto deberia redireccionar al correspondiente post y comment_form.
+      respond_to do |format|
+        format.html { redirect_to(posts_url)}
+        format.xml  { head :ok }
+      end
+  end
 end

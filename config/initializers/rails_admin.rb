@@ -4,7 +4,7 @@ RailsAdmin.config do |config|
     edit do
       field :title
       field :tags
-      field :idioma
+      field :idioma_id # si se pone solo idioma no funciona, si se pone idioma_id puedo elegir a que idioma pertenece.
       field :body, :text do
         ckeditor true
       end

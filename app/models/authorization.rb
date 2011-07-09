@@ -24,4 +24,8 @@ class Authorization < ActiveRecord::Base
     user = User.create_from_hash!(hash)  #La admiracion al final de un metodo puede significar que va a modificar el objeto mismo, por lo cual se considera algo peligroso, o simplemente puede dar información de que ese metodo hace algo inusual.. lo utilizan los desarrolladores para "adornar" y dar mas informacion sobre el metodo.
     Authorization.create(:user => user, :uid => hash['uid'], :provider => hash['provider'])
   end
+
+  def self.find_from_user_id(user_id)
+    find_by_user_id(user_id)
+  end
 end

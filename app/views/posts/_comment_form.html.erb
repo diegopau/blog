@@ -11,7 +11,7 @@
  <div class = "providers_buttons">
     <% if signed_in? %>
         <%- # TODO: tambies es necesario un sign out, una vez estas logueado -%>
-       <div class = "logged_with"> You are signed in with <%= current_user.authorization.provider %>, leave your answer below: </div>
+       <div class = "logged_with"> You are signed in with <%= current_user.authorization.provider %> (<%=link_to "Sign out", {:controller => 'sessions', :action => 'destroy'}, :method => :post %>), leave your answer below: </div>
 
     <% else %>
        <div class="autenticate_con"> Autenticate con:</div>
