@@ -50,9 +50,11 @@
 .providers_buttons {
     width: 550px;
     float:left;
+    height: 35px;
 }
 
 .autenticate_con{
+    padding-top: 4px;
     padding-left: 20px;
       float:left;
       font-size: 15px;
@@ -63,6 +65,12 @@
 .provider_button{
     float:left;
     width: 40px;
+    height: 35px;
+}
+
+.provider_button img:hover{
+    padding-top:2px;
+
 }
 
 .comment_form {
@@ -80,28 +88,34 @@
 .new_comment .name_field{
     float:left;
     width: 230px;
+    padding-bottom: 15px;
 }
 
 .new_comment .name_field label{
 }
 
 .new_comment .name_field input{
-         width: 150px;
+    width: 150px;
+    color: gray;
+    font-style: italic;
 
 }
 
 .new_comment .web_page_field{
     float: left;
     width: 300px;
+    padding-bottom: 15px;
+
 }
 
 .new_comment .web_page_field input {
      width: 200px;
+     color: gray;
+     font-style: italic;
 }
 
 .new_comment .comment_field{
     float: left;
-    padding-top: 20px;
     padding-bottom: 15px;
 }
 
@@ -114,6 +128,8 @@
     height: 100px;
     width: 490px;
     padding: 5px;
+    color: gray;
+    font-style: italic;
 }
 
 .new_comment .submit_button{

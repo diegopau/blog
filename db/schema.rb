@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20110708132857) do
     t.datetime "updated_at"
   end
 
-  create_table "idiomas", :force => true do |t|
+  create_table "languages", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(:version => 20110708132857) do
     t.string   "title"
     t.text     "body"
     t.datetime "published_at"
-    t.integer  "idioma_id"
+    t.integer  "language_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

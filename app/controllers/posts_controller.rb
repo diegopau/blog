@@ -14,28 +14,33 @@ class PostsController < ApplicationController
 
   def search_result
     # TODO: los resultados de la busqueda no estan ordenados por fecha, habia un problema al añadir 'created_at' DESC
-    # Se realizan busquedas de parametros que no pertenecen al modelo Post, sino a modelos asociados (tags e idiomas) para ello se usa el metodo "joins" http://guides.rubyonrails.org/active_record_querying.html#specifying-conditions-on-the-joined-tables
+    # Se realizan busquedas de parametros que no pertenecen al modelo Post, sino a modelos asociados (tags y languages) para ello se usa el metodo "joins" http://guides.rubyonrails.org/active_record_querying.html#specifying-conditions-on-the-joined-tables
+    puts "entro en el search_result"
+    puts "el valor de los parametros es: language = #{params[:language]} y tag = #{params[:tag]}"
 
-    if (params[:tag] != nil && params[:idioma] != nil)  #se especifica tanto un tag como un idioma
-      @posts = Post.all(:include => :tags, :conditions => ["tags.id = ? AND idioma.name = ?", params[:tag], params[:idioma]])
-    elsif params[:tag] == nil  #se especifica un idioma
-      # Esta otra forma de expresarlo es igualmente valida, simplemente otro formato: @posts = Post.joins(:idioma).where('idoma.name' => params[:idioma])
-      @posts = Post.joins(:idioma).where(:idioma => {:name => params[:idioma]})
-      puts "Encontre los posts:"
-      @posts.each do |post|
-        puts post.title
-        puts post.idioma.name
-      end
+    if (params[:tag] != nil && params[:language] != nil)  #se especifica tanto un tag como un language
+      puts "se especifico tanto un language como un tag"
+      @posts = Post.joins(:tags).joins(:language).where(:tags => {:name => params[:tag]}, :languages => {:name => params[:language]})
+    elsif params[:tag] == nil  #se especifica un language
+      puts "solo se especifico language"
+      # Esta otra forma de expresarlo es igualmente valida, simplemente otro formato: @posts = Post.joins(:language).where('idomas.name' => params[:language])
+      @posts = Post.joins(:language).where(:languages => {:name => params[:language]})    #cuidado con los PLURALES Y SINGULARES!!
     else    #se especifica un tag
+      puts "solo se especifico tag"
       # Es necesario hacer un joins para acceder a la informacion de los tags que pertenece a otro modelo
       @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]})
       # La que esta implementada es una manera equivalenete de hacer esto:  @posts = Post.all(:include => :tags, :conditions => ["tags.name = ?", params[:tag]]) # Es importante el :include, ya que en este caso posts has many tags.. y si no pones el include no hace la busqueda dentro de los tags tb.
       # con la diferencia de que esta ultima es la forma vieja y menos recomendada
     end
 
+
+
     @tags = Tag.all
-    @tag = params[:tag]
-    @comment = Comment.new()
+    @tag = params[:tag]       #si no se han pasado como parametro simplemente valdran nil
+    @language = params[:language]
+
+    @comment = Comment.new() #necesario para rellenar el formulario de un comentario
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

@@ -3,10 +3,9 @@
   <% @tags.each do |tag| %>
 
       <% if tag.name == @tag %>
-          <% puts "passssssssssssoooooooooo" %>
-         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name}, :class => "selected_tag" %> </li>
+         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name, :language => @language}, :class => "selected_tag" %> </li>
       <% else %>
-         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name} %> </li>
+         <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name, :language => @language} %> </li>
       <% end %>
   <% end %>
 </ul>

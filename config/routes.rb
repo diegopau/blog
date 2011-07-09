@@ -1,24 +1,25 @@
 Blog::Application.routes.draw do
 
+  root :to => 'posts#index'
+
   devise_for :admin_users
 
   resources :comments
 
-  match '/comments/:id/:post_id', :to => 'comments#eliminar'
+  match '/posts/search', :to => 'posts#search_result'  # esta linea siempre tiene que estar antes que resources :posts para tener mas prioridad y que no se interprete search como parámetro id.
 
   resources :posts
-
-  match '/tags/:tag', :to => 'posts#search_result'
-  match '/language/:idioma', :to => 'posts#search_result'
 
   match '/about_me', :to => 'basic_pages#about_me'
 
   match '/contact', :to => 'basic_pages#contact'
 
-  root :to => 'posts#index'
+  match '/sessions', :to => 'sessions#destroy'
 
   match '/auth/:provider/callback', :to => 'sessions#create'
-  match '/sessions', :to => 'sessions#destroy'
+
+
+  match '/comments/:id/:post_id', :to => 'comments#eliminar'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
