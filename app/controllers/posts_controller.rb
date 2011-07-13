@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
 
   def index
+    @last_posts = Post.order('created_at DESC').limit(10)  #se recogen los 10 posts mas recientes.
     @posts = Post.all(:order => 'created_at DESC')
     @tags = Tag.all
     @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
@@ -34,7 +35,7 @@ class PostsController < ApplicationController
     end
 
 
-
+    @last_posts = Post.order('created_at DESC').limit(10) #se recogen los 10 posts mas recientes.
     @tags = Tag.all
     @tag = params[:tag]       #si no se han pasado como parametro simplemente valdran nil
     @language = params[:language]

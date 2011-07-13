@@ -68,8 +68,12 @@
     height: 35px;
 }
 
+.provider_button img{    /* Esto es para el efecto de que se muevan los iconitos */
+     padding-top:2px;
+}
+
 .provider_button img:hover{
-    padding-top:2px;
+    padding-top:0;
 
 }
 
