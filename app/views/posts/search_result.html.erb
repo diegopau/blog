@@ -1,77 +1,17 @@
-<div class="cabecera_vacia span-4">&nbsp;
-</div>
+<%= render :partial => 'cabecera_search_done' %>
 
-<div class="cabecera span-14">
-  <h1><%= link_to "Diego Pau Blog", root_path %></h1>
-</div>
-
-<div class="cabecera_language span-5 last">
-  <div style="float:left; width:190px;"> Ver posts en: </div>
-  <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :language => "english"} %>&nbsp;|&nbsp;</div>
-  <div id="espanhol"><%= link_to "Español", {:controller => 'posts', :action => 'search_result', :language => "espanhol"} %>&nbsp;|&nbsp;</div>
-  <div id="todos"><%= link_to "Todos", root_path %></div>
-</div>
 
 <div class="cuerpo span-24 last">
 
-  <div class="left_column span-4">
-
-    <div id="ficha">
-      <div id="foto"><%= image_tag("diegopau.jpg", :width => "108px", :id => "imagen_foto") %></div>
-      <div id="descripcion"><%= link_to "About me", {:controller=>'basic_pages', :action =>'about_me'} %></div>
-    </div>
-
-    <br>
-
-    <div id="tags">
-      <%= render :partial => 'selected_tag' %>
-    </div>
-
-
-  </div>
-
+  <%= render :partial => 'left_column_search_done' %>
 
   <div class="posts span-14">
 
-    <% @posts.each do |post| %>
+     <%= render :partial => 'post', :collection => @posts %>
 
-        <div class="post">
-          <div class="post_title"><h2><%= post.title %></h2></div>
-          <div class="post_date"><%= post.created_at.to_s(:long) %></div>
-          <div class="post_body text_base"><%= post.body.html_safe %></div>
-          <br>
-
-        </div>
-
-        <div class="comments" id="comments_<%= post.id %>">
-
-          <span class="comments_count" id="comments_count_<%= post.id %>"> <%= pluralize(post.comments.count, "Comment") %></span>
-
-          <%= render :partial => 'comment', :collection => post.comments %>
-
-        </div>
-
-        <div id="comment-notice_<%= post.id %>"></div>
-
-        <div class="comment_form">
-          <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post    -%>
-          <%= render :partial => 'comment_form', :locals => {:post => post.id} %>
-        </div>
-
-        <div class="space_between_posts">&nbsp;</div>
-
-    <% end %>
   </div>
 
-  <div class="right_column span-5 last">
-    <div id="buscador">
-      Search:
-    </div>
-
-    <div id="archivo">
-
-    </div>
-  </div>
+  <%= render :partial => 'right_column' %>
 
 </div>
 <br/>

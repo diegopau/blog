@@ -6,7 +6,6 @@ class PostsController < ApplicationController
     @last_posts = Post.order('created_at DESC').limit(10)  #se recogen los 10 posts mas recientes.
     @posts = Post.all(:order => 'created_at DESC')
     @tags = Tag.all
-    @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -40,8 +39,6 @@ class PostsController < ApplicationController
     @tag = params[:tag]       #si no se han pasado como parametro simplemente valdran nil
     @language = params[:language]
 
-    @comment = Comment.new() #necesario para rellenar el formulario de un comentario
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -51,8 +48,10 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
+    @last_posts = Post.order('created_at DESC').limit(10) #se recogen los 10 posts mas recientes.
+    @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
     @post = Post.find(params[:id])
-
+    @tags = Tag.all
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }

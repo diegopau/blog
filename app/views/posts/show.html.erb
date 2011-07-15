@@ -1,0 +1,45 @@
+<%= render :partial => 'cabecera_search_done' %>
+
+<div class="cuerpo span-24 last">
+
+  <%= render :partial => 'left_column_search_done' %>
+
+  <div class="posts span-14">
+
+    <div class="post">
+      <div class="post_title"><h2><%= link_to "#{@post.title}", post_path(@post) %></h2></div>
+      <div class="post_date"><%= @post.created_at.to_s(:long) %></div>
+      <div class="post_body text_base"><%= @post.body.html_safe %></div>
+      <br>
+    </div>
+
+    <div class="comments">
+
+      <span class="comments_count"> <%= pluralize(@post.comments.count, "Comment") %></span>
+
+      <span class="leave_a_comment">
+        <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
+      </span>
+
+      <%= render :partial => 'comment', :collection => @post.comments %>
+
+    </div>
+
+    <div id="comment-notice"></div>
+
+    <div class="comment_form">
+      <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post      -%>
+      <%= render :partial => 'comment_form', :locals => {:post => @post.id} %>
+    </div>
+
+
+
+    <div class="space_between_posts">&nbsp;</div>
+
+  </div>
+
+  <%= render :partial => 'right_column' %>
+
+</div>
+<br/>
+

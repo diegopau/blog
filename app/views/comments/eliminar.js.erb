@@ -1,4 +1,4 @@
 /* Eliminate the comment by fading it out */
-$('#comment_<%=@comment.post.id%>_<%= @comment.id %>').fadeOut(); //para identificar correctamente un comentario, al estar mezclados los comentarios de varios post, será necesario identificarlo tanto por su id como la id de su post.
+$('#comment_<%= @comment.id %>').fadeOut(); //para identificar correctamente un comentario, al estar mezclados los comentarios de varios post, será necesario identificarlo tanto por su id como la id de su post.
 /* Replace the count of comments */
-$("#comments_count_<%=@comment.post.id %>").html("<%= pluralize(Comment.count, 'Comentario') %>");
+$("#comments_count").html("<%= pluralize(Comment.count, 'Comentario') %>");

@@ -1,0 +1,25 @@
+<div class="left_column span-4">
+
+  <div id="ficha">
+    <div id="foto"><%= image_tag("diegopau.jpg", :width => "108px", :id => "imagen_foto") %></div>
+    <div id="descripcion"><%= link_to "About me", {:controller=>'basic_pages', :action =>'about_me'} %></div>
+  </div>
+
+  <br>
+
+  <div id="tags">
+    <p>Tags:</p>
+    <ul>
+      <% @tags.each do |tag| %>
+
+          <% if tag.name == @tag %>
+              <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name, :language => @language}, :class => "selected_tag" %> </li>
+          <% else %>
+              <li><%= link_to "#{tag.name} (#{tag.posts.count})", {:controller => 'posts', :action => 'search_result', :tag => tag.name, :language => @language} %> </li>
+          <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+
+</div>

@@ -3,8 +3,7 @@
         if (theText.value == theText.defaultValue) {
             theText.value = "";
         }
-        /* TODO: Esto es una chapuza, tno puedo pasarle en la variable divClass el nombre de la clase (porque así ademas los cambios afectan
-           a todos los formularios. Lo logico es que con esa veriable theText que es el objeto Value de cada field, pueda deducir su clase padre y ahí cambiar los valores. */
+        /* TODO: Esto es una chapuza, Lo logico es que con esa veriable theText que es el objeto Value de cada field, pueda deducir su clase padre y ahí cambiar los valores. */
         if (divClass == ".name_field input") {
             $(".name_field input").css('color', 'black');
         }
@@ -21,7 +20,11 @@
     Introduce un comentario:
 </h3>
 
- <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
+<%- #esto es un anchor, como un bookmark dentro de una pagina  -%>
+<a name="comment_form"></a>
+
+
+<%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
  <div class = "providers_buttons">
     <% if signed_in? %>
@@ -40,7 +43,7 @@
 <%- # Este formulario envia al controlador de comments los siguientes parametros para crear un objeto tipo comment (aunque estamos en una vista perteneciente a posts form_for envia el formulario a la función create dentro del controlador de comments)):  -%>
 <%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}   -%>
 
-<%= form_for(@comment, :remote => true, :html => {:id => "comment_form_#{post}"}) do |f| %>
+<%= form_for(@comment, :remote => true, :html => {:id => "comment_form"}) do |f| %>
     <% if @comment.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>

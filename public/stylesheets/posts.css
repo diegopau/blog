@@ -1,11 +1,13 @@
 .posts{
     padding-left: 15px;
     padding-right: 25px;
+    min-height: 50px; /* soluciona un problema que habia cuando no habia ninguna post que resultar tras una busqueda */
 }
 
 
 .post {
     float:left;
+    margin-bottom:10px;
 }
 
 .post h2{
@@ -37,6 +39,18 @@
 .comments{
     width: 550px;
     float: left;
+}
+
+.comments_count{
+    float: left;
+    width: 250px;
+}
+
+.show_comments{
+    float: left;
+    text-align: right;
+    width: 300px;
+    font-size: 15px;
 }
 
 .space_between_posts{
@@ -142,4 +156,8 @@
 
 .notificacion_de_comentario{
     float: left;
+}
+
+.notice{
+    float:left;
 }

@@ -1,0 +1,16 @@
+<div class="right_column span-5 last">
+  <div id="newest_posts">
+    <p> Posts m&aacute;s recientes:</p>
+    <% @last_posts.each do |post| %>
+        <%= link_to "#{post.title}", post_path(post.id) %>
+    <% end %>
+  </div>
+  <br>
+  <div id="buscador">
+    Search:
+  </div>
+  <br>
+  <div id="archivo">
+
+  </div>
+</div>

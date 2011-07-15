@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     # Log the authorizing user in.
     self.current_user = @auth.user
 
-    # Una vez creada la sesion se redirecciona al indice de posts (esto hay que cambiarlo)
+    # TODO: Una vez creada la sesion se redirecciona al indice de posts (esto hay que cambiarlo)
     redirect_to(posts_url, :notice => 'Te has logueado')
   end
 
