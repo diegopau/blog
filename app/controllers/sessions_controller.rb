@@ -8,16 +8,16 @@ class SessionsController < ApplicationController
     # Log the authorizing user in.
     self.current_user = @auth.user
 
-    # TODO: Una vez creada la sesion se redirecciona al indice de posts (esto hay que cambiarlo)
-    redirect_to(posts_url, :notice => 'Te has logueado')
+    # Para volver a donde el usuario estaba antes de haberse logueado (obtenido de: https://github.com/intridea/omniauth/wiki/Saving-User-Location)
+    redirect_to request.env['omniauth.origin'] || '/default'
   end
 
   def destroy
       session[:user_id] = nil #esta variable session parece ser algo interno, perteneciente al ActionController
 
-      # TODO: esto deberia redireccionar al correspondiente post y comment_form.
+      # Se redirecciona al post en el que se estaba gracias al parametro post_id que se le pasa.
       respond_to do |format|
-        format.html { redirect_to(posts_url)}
+        format.html { redirect_to(post_url(params[:post_id]))}
         format.xml  { head :ok }
       end
   end

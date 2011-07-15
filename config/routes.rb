@@ -19,7 +19,6 @@ Blog::Application.routes.draw do
 
   match '/auth/:provider/callback', :to => 'sessions#create'
 
-
   match '/comments/:id/:post_id', :to => 'comments#eliminar'
 
   # The priority is based upon order of creation:
