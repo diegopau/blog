@@ -1,9 +1,13 @@
 <div class="right_column span-5 last">
   <div id="newest_posts">
-    <p> Posts m&aacute;s recientes:</p>
-    <% @last_posts.each do |post| %>
-        <%= link_to "#{post.title}", post_path(post.id) %>
-    <% end %>
+    <p> Most recent posts:</p>
+        <ul>
+            <% @last_posts.each do |post| %>
+               <li>
+                <%= link_to "#{post.title}", post_path(post.id) %>
+              </li>
+            <% end %>
+        </ul>
   </div>
   <br>
   <div id="buscador">

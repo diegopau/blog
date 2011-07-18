@@ -5,7 +5,7 @@
 <%- # IMPORTANTE, LOS OBJETOS ESPANHOL E INGLES PARA LOS languageS HAY QUE CREARLOS MANUALMENTE CON RAILS_ADMIN EN CASO DE RESETEAR LA BASE DE DATOS  %>
 
 <div class="cabecera_language span-5 last">
-  <div style="float:left; width:190px;"> Ver posts en:</div>
+  <div style="float:left; width:190px;"> See posts in:</div>
   <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :language => "english"} %>&nbsp;|&nbsp;</div>
   <div id="espanhol"><%= link_to "Español", {:controller => 'posts', :action => 'search_result', :language => "espanhol"} %></div>
 </div>
