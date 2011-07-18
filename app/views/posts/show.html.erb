@@ -13,13 +13,15 @@
       <br>
     </div>
 
-    <div class="comments">
+    <div id="comments">
 
-      <span class="comments_count"> <%= pluralize(@post.comments.count, "Comment") %></span>
+      <div id="comments_header">
+        <span id="comments_count"> <%= pluralize(@post.comments.count, "Comment") %></span>
 
-      <span class="leave_a_comment">
-        <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
-      </span>
+         <span id="leave_a_comment">
+            <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
+         </span>
+      </div>
 
       <%= render :partial => 'comment', :collection => @post.comments %>
 
@@ -27,14 +29,11 @@
 
     <div id="comment-notice"></div>
 
-    <div class="comment_form">
+    <div id="comment_form">
       <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post      -%>
       <%= render :partial => 'comment_form', :locals => {:post => @post.id} %>
     </div>
 
-
-
-    <div class="space_between_posts">&nbsp;</div>
 
   </div>
 

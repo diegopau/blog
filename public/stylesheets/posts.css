@@ -15,6 +15,10 @@
     color: black;
 }
 
+.post h2 a{
+    text-decoration: none;
+}
+
 .post_title{
     width: 550px;
     float: left;
@@ -36,21 +40,113 @@
 
 }
 
-.comments{
-    width: 550px;
+
+/* estos dos parametros son para el listado general de posts */
+.show_comments{
     float: left;
+    text-align: right;
+    width: 200px;
+}
+.show_comments a{
+   text-decoration: none;
 }
 
 .comments_count{
     float: left;
+    width: 350px;
+}
+
+
+#comments{
+    width: 550px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#comments_header{
+    float: left;
+    padding-bottom: 0;
+    border-color: lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+#comments_count{
+    font-size: 15px;
+    float: left;
     width: 250px;
 }
 
-.show_comments{
+#leave_a_comment{
     float: left;
     text-align: right;
     width: 300px;
     font-size: 15px;
+}
+
+#leave_a_comment a{
+    text-decoration: none;
+}
+
+.comment{
+  float:left;
+  width:500px;
+  margin-left:15px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+  padding-left:5px;
+  padding-right:10px;
+  border-color: lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment p{
+    margin: 0;
+}
+
+.dateandoptions{
+    float:left;
+    width: 220px;
+    text-align: right;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dateandoptions a{
+    text-decoration: none;
+}
+
+.comment_owner{
+    float:left;
+    width:200px;
+    font-size: 16px;
+    line-height: 16px;
+     margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment_owner a{
+    text-decoration: none;
+}
+
+.comment_picture{
+    float: left;
+    margin: 5px;
+    padding-right: 15px;
+}
+
+.comment_picture img{
+    padding: 1px;
+    border: 1px solid lightgray;
+}
+
+.comment_content{
+    float:left;
+    width: 420px;
+    font-size:13px;
 }
 
 .space_between_posts{
@@ -59,6 +155,17 @@
     width: 550px;
     border-top:solid 1px;
     border-color: lightgray;
+}
+
+.logged_with{
+    float: left;
+    padding-left: 20px;
+    font-size: 13px;
+
+}
+
+.logged_with a{
+    text-decoration: none;
 }
 
 .providers_buttons {
@@ -91,22 +198,25 @@
 
 }
 
-.comment_form {
+#comment_form {
     float: left;
     padding-bottom:20px;
 }
 
+ #comment_form h3{
+     margin-bottom: 10px;
+ }
+
 .new_comment{
     float:left;
     padding-left: 20px;
-    margin-top: 10px;
     padding-top: 10px;
 }
 
 .new_comment .name_field{
     float:left;
     width: 230px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .new_comment .name_field label{
@@ -122,7 +232,7 @@
 .new_comment .web_page_field{
     float: left;
     width: 300px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 
 }
 

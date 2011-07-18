@@ -1,12 +1,40 @@
 <%-#  -%>
-<div id="comment_<%=comment.id%>">
-    <span class="dateandoptions">
-        Posted <%= time_ago_in_words(comment.created_at) %> ago<br>
-        <%= link_to 'Delete', {:controller => 'comments', :action => 'eliminar', :id => comment.id, :post_id => comment.post.id}, :method => :post, :remote => true %>
+<div id="comment_<%=comment.id%>" class="comment">
+      <div class="comment_picture">
+        <% if comment.user != nil && comment.user.image_url != nil %>
+            <%= image_tag "#{comment.user.image_url}", :width => "50px" %>
+        <% else %>
+            <%= image_tag "anonimo_discreto.png", :width => "50px" %>
+        <% end %>
+      </div>
+
+     <span class="comment_owner">
+        <% if comment.user != nil %>
+           <% if comment.user.website != nil %>
+              <%= link_to "#{comment.user.name}", comment.user.website %>
+           <% else %>
+              <%= user.name %>
+           <% end %>
+        <% else %>
+           <% if comment.web_page != nil %>
+               <%= link_to "#{comment.user_name}", "http://" + comment.web_page %>
+           <% else %>
+               <%= comment.user_name %>
+           <% end %>
+        <% end %>
     </span>
-    <p><b><%= comment.user_name %></b> wrote:</p>
-    <br>
-    <% if comment.web_page != nil %> <p><b> Webpage:</b><%= comment.web_page %></p> <% end %>
-    <br>
-    <%= content_tag(:p, comment.contenido, :class => "comment-body") %>
+
+   <span class="dateandoptions">
+        Posted <%= time_ago_in_words(comment.created_at) %> ago
+     <% if comment.user != nil && signed_in? %>
+          <% if comment.user.id == current_user.id %>
+              &nbsp;|&nbsp;<%= link_to 'Delete', {:controller => 'comments', :action => 'eliminar', :id => comment.id, :post_id => comment.post.id}, :method => :post, :remote => true %>
+          <% end %>
+        <% end %>
+    </span>
+
+
+  <div class = "comment_content">
+      <%= content_tag(:p, comment.contenido, :class => "comment-body") %>
+  </div>
 </div>

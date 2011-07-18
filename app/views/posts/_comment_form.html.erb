@@ -5,19 +5,19 @@
         }
         /* TODO: Esto es una chapuza, Lo logico es que con esa veriable theText que es el objeto Value de cada field, pueda deducir su clase padre y ahí cambiar los valores. */
         if (divClass == ".name_field input") {
-            $(".name_field input").css('color', 'black');
+            $(".name_field input").css('color', 'black').css('font-style','normal');
         }
         else if (divClass == ".web_page_field input") {
-            $(".web_page_field input").css('color', 'black');
+            $(".web_page_field input").css('color', 'black').css('font-style', 'normal');
         }
         else {
-            $(".comment_field textarea").css('color', 'black');
+            $(".comment_field textarea").css('color', 'black').css('font-style', 'normal');
         }
     }
 </script>
 
 <h3>
-    Introduce un comentario:
+  Introduce un comentario:
 </h3>
 
 <%- #esto es un anchor, como un bookmark dentro de una pagina  -%>
@@ -26,19 +26,21 @@
 
 <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
- <div class = "providers_buttons">
-    <% if signed_in? %>
-        <%- # TODO: tambies es necesario un sign out, una vez estas logueado -%>
-       <div class = "logged_with"> You are signed in with <%= current_user.authorization.provider %> (<%=link_to "Sign out", {:controller => 'sessions', :action => 'destroy', :post_id => post}, :method => :post %>), leave your answer below: </div>
 
-    <% else %>
-       <div class="autenticate_con"> Autenticate con:</div>
-       <div class="provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
-       <div class="provider_button"> <%= link_to image_tag("twitter_button.png", :width => "30x30"), '/auth/twitter' %></div>
-       <div class="provider_button"> <%= link_to image_tag("linkedin_button.png", :width => "30x30"), '/auth/linked_in' %></div>
-    <% end %>
+<% if signed_in? %>
+    <%- # TODO: tambies es necesario un sign out, una vez estas logueado -%>
+    <div class = "logged_with"> You are signed in with <b><%= current_user.authorization.provider %></b> (<%=link_to "Sign out", {:controller => 'sessions', :action => 'destroy', :post_id => post}, :method => :post %>), leave your answer below: </div>
 
- </div>
+<% else %>
+    <div class="providers_buttons">
+      <div class="autenticate_con"> Autenticate con:</div>
+      <div class="provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
+      <div class="provider_button"> <%= link_to image_tag("twitter_button.png", :width => "30x30"), '/auth/twitter' %></div>
+      <div class="provider_button"> <%= link_to image_tag("linkedin_button.png", :width => "30x30"), '/auth/linked_in' %></div>
+    </div>
+<% end %>
+
+
 
 <%- # Este formulario envia al controlador de comments los siguientes parametros para crear un objeto tipo comment (aunque estamos en una vista perteneciente a posts form_for envia el formulario a la función create dentro del controlador de comments)):  -%>
 <%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}   -%>

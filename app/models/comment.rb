@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110707124752
+# Schema version: 20110718133256
 #
 # Table name: comments
 #
@@ -12,6 +12,7 @@
 #  published_at :datetime
 #  created_at   :datetime
 #  updated_at   :datetime
+#  image_url    :string(255)
 #
 
 class Comment < ActiveRecord::Base

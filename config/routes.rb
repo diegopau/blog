@@ -11,10 +11,6 @@ Blog::Application.routes.draw do
 
   resources :posts
 
-  match '/about_me', :to => 'basic_pages#about_me'
-
-  match '/contact', :to => 'basic_pages#contact'
-
   match '/sessions', :to => 'sessions#destroy'
 
   match '/auth/:provider/callback', :to => 'sessions#create'

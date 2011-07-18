@@ -2,7 +2,7 @@
 
   <div id="ficha">
     <div id="foto"><%= image_tag("diegopau.jpg", :width => "108px", :id => "imagen_foto") %></div>
-    <div id="descripcion"><%= link_to "About me", {:controller=>'basic_pages', :action =>'about_me'} %></div>
+    <div id="descripcion"> <%= link_to "About me", {:controller => 'posts', :action => 'search_result', :tag => 'about_me'} %>  </div>
   </div>
 
   <br>

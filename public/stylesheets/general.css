@@ -104,8 +104,12 @@ body {
 }
 
 #tags {
-    padding-left: 15px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#tags p{
+    margin-bottom: 10px;
 }
 
 #tags ul {
@@ -123,6 +127,14 @@ body {
 
 .right_column{
 
+}
+
+#newest_posts{
+
+}
+
+#newest_posts p{
+    margin-bottom: 10px;
 }
 
 #buscador {

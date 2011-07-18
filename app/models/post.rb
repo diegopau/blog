@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110707124752
+# Schema version: 20110708132857
 #
 # Table name: posts
 #
@@ -7,7 +7,7 @@
 #  title        :string(255)
 #  body         :text
 #  published_at :datetime
-#  language_id    :integer
+#  language_id  :integer
 #  created_at   :datetime
 #  updated_at   :datetime
 #
