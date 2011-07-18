@@ -13,7 +13,7 @@
            <% if comment.user.website != nil %>
               <%= link_to "#{comment.user.name}", comment.user.website %>
            <% else %>
-              <%= user.name %>
+              <%= comment.user.name %>
            <% end %>
         <% else %>
            <% if comment.web_page != nil %>

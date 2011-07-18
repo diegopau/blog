@@ -28,10 +28,9 @@
 
 
 <% if signed_in? %>
-    <%- # TODO: tambies es necesario un sign out, una vez estas logueado -%>
     <div class = "logged_with"> You are signed in with <b><%= current_user.authorization.provider %></b> (<%=link_to "Sign out", {:controller => 'sessions', :action => 'destroy', :post_id => post}, :method => :post %>), leave your answer below: </div>
-
 <% else %>
+    <%- # TODO: esto se tiene que abrir en una ventana nueva  -%>
     <div class="providers_buttons">
       <div class="autenticate_con"> Autenticate con:</div>
       <div class="provider_button"> <%= link_to image_tag("facebook_button.png", :width => "30x30"), '/auth/facebook' %></div>
