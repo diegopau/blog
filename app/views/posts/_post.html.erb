@@ -6,7 +6,7 @@
 </div>
 <span class="comments_count"> <%= pluralize(post.comments.count, "Comment") %></span>
 <span class="show_comments">
-     <%= link_to "Show / leave comments", post_path(post.id), :anchor => "comment_form" %>
+     <%= link_to "Show / leave comments", post_path(post), :anchor => "comment_form" %>
 </span>
 
 <%- # TODO: hay que hacer que si el post es muy largo no salga todo el post, sino solo parte de el... pero ¡cuidado con las imágenes! -%>

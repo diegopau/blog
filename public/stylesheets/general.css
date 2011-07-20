@@ -95,13 +95,16 @@ body a{
     background-color: #FFF;
 }
 
+.left_column{
+
+}
+
 .left_column a{
     color: #0044CC;
 }
 
 .left_column a:hover{
     color: #0088EE;
-
 }
 
 #ficha {
@@ -172,12 +175,12 @@ body a{
 #tags li a:hover{
     color: white;
     background-color: #0066CC;
-    border-color: #D0FFCF;
 }
 
 #tags li:hover{
-
-
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .selected_tag {
