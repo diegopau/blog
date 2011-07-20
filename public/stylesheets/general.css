@@ -37,6 +37,10 @@ body a{
     margin-bottom:20px;
 }
 
+#blue_box img:hover{
+    opacity:0.8;
+}
+
 .cabecera_nombre h1{
     float: left;
     margin: 0;
