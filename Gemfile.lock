@@ -111,10 +111,11 @@ GEM
       oa-oauth (= 0.2.6)
       oa-openid (= 0.2.6)
     orm_adapter (0.0.5)
-    paperclip (2.3.13)
+    paperclip (2.3.15)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.3)
     rack (1.2.3)
@@ -175,7 +176,7 @@ DEPENDENCIES
   geoip-rails
   jquery-rails (= 1.0.12)
   omniauth (= 0.2.6)
-  paperclip (= 2.3.13)
+  paperclip (= 2.3.15)
   rails (= 3.0.8)
   rails_admin!
   rake (= 0.9.2)
