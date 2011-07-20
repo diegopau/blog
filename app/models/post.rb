@@ -17,7 +17,8 @@ class Post < ActiveRecord::Base
   has_and_belongs_to_many :tags
   belongs_to :language
 
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
   # TODO: para añadir imagenes y almacenarlas habría que crear un modelo "imagen" perteneciente a post y que así un post pueda tener many imagenes.
-
-  # TODO: debe ser un requisito que un post tenga un titulo, que pertenezca a un language y que tenga un contenido y al menos un tag asociado.
 end

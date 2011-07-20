@@ -1,11 +1,13 @@
-<div class="cabecera span-18">
-  <h1><%= link_to "Diego Pau Blog", root_path %> </h1>
-</div>
+<div id="cabecera">
+    <div class="cabecera_nombre span-18">
+      <h1><%= link_to "Diego Pau Blog", root_path %> </h1>
+    </div>
 
-<%- # IMPORTANTE, LOS OBJETOS ESPANHOL E INGLES PARA LOS languageS HAY QUE CREARLOS MANUALMENTE CON RAILS_ADMIN EN CASO DE RESETEAR LA BASE DE DATOS  %>
+    <%- # IMPORTANTE, LOS OBJETOS ESPANHOL E INGLES PARA LOS languageS HAY QUE CREARLOS MANUALMENTE CON RAILS_ADMIN EN CASO DE RESETEAR LA BASE DE DATOS  %>
 
-<div class="cabecera_language span-5 last">
-  <div style="float:left; width:190px;"> See posts in:</div>
-  <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :language => "english"} %>&nbsp;|&nbsp;</div>
-  <div id="espanhol"><%= link_to "Español", {:controller => 'posts', :action => 'search_result', :language => "espanhol"} %></div>
+    <div class="cabecera_language span-5 last">
+      <div style="float:left; width:190px; font-size:13px;"> See posts in:</div>
+      <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :language => "english"} %>&nbsp;|&nbsp;</div>
+      <div id="espanhol"><%= link_to "Español", {:controller => 'posts', :action => 'search_result', :language => "espanhol"} %></div>
+    </div>
 </div>

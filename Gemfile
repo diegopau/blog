@@ -13,7 +13,6 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO
 gem 'jquery-rails', '1.0.12'
 gem 'paperclip', '2.3.13' # para manegar archivos adjuntos, principalmente imagenes.
 
-
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate-models', '1.0.4' #se ejecuta annotate nombre_modelo y le mete en el modelo información sobre la tabla de la base de datos que representa

@@ -1,9 +1,10 @@
 body {
-
+   background: url("../images/fondo.png") repeat-x scroll 0 0
 }
 
 body a{
     text-decoration:none;
+    color:
 }
 
 .text_base {
@@ -11,22 +12,18 @@ body a{
     font-size: 14px;
 }
 
-.cabecera_vacia{
-    height: 40px;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+#cabecera{
+    float:left;
 }
 
-.cabecera {
-    margin-top: 10px;
+.cabecera_nombre {
+    float: left;
     padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 25px;
     margin-bottom: 10px;
-    height: 40px;
+    height: 50px;
     border-width: 1px;
     border-color: lightgray;
     border-top-right-radius: 10px;
@@ -34,16 +31,37 @@ body a{
 
 }
 
+.cabecera_nombre h1{
+    margin: 0;
+    font-size: 40px;
+}
+
+.cabecera_nombre h1 a{
+    color: #0026CC
+}
+
+.cabecera_nombre h1 a:hover{
+    color:  #0066FF
+ }
 .cabecera_language{
-    height: 40px;
-    margin-top: 10px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    float: left;
+    height: 50px;
+    padding-top: 30px;
+    padding-bottom: 0px;
     margin-bottom: 10px;
+}
+
+.cabecera_language a{
+    color: #0044CC
+}
+
+.cabecera_language a:hover{
+    color: #0088EE
 }
 
 .cabecera_language #english{
     float:left;
+    padding-left:5px;
 }
 
 .cabecera_language #espanhol{
@@ -78,7 +96,8 @@ body a{
     background-color: #FFF;
 }
 
-.left_column {
+.left_column a{
+    color: #0044CC;
 }
 
 #ficha {
@@ -126,14 +145,50 @@ body a{
     text-decoration: none;
 }
 
+#tags li{
+    padding-top: 0px;
+    padding-right:0px;
+
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    background-color: #EFFBFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #D0FFCF;
+    border-width: 1px;
+}
+
+#tags li a{
+    display:block; /* Esto hace que el enlace ocupe toda la casilla li en la que se encuentra */
+    padding-left: 5px;
+    padding-right: 4px;
+    border-radius: 10px;
+}
+
+#tags li a:hover{
+    color: white;
+    background-color: #0066CC;
+    border-color: #D0FFCF;
+}
+
+#tags li:hover{
+
+
+}
+
 .selected_tag {
     font-weight: bold;
     font-size: 16px;
 
 }
 
-.right_column{
+.right_column a{
 
+    color: #0044CC;
+}
+
+.right_column a:hover{
+    color: #0088EE;
 }
 
 #newest_posts{
@@ -147,15 +202,25 @@ body a{
 
 #newest_posts ul {
     list-style-type: none;
+    padding-top: 4px;
     padding-left: 5px;
     padding-right: 10px;
     margin: 0;
     font-size: 12px;
+    background-color: #EFFBFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #D0FFCF;
+    border-width: 1px;
 
 }
 
 #newest_posts li{
     padding-bottom: 5px;
+}
+
+#newest_posts li a{
+    display: block;
 }
 
 #buscador {

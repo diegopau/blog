@@ -18,4 +18,6 @@
 class Comment < ActiveRecord::Base
   belongs_to :post
   belongs_to :user
+
+  #TODO: meter algunas validaciones para los comentarios
 end
