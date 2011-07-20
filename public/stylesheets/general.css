@@ -4,7 +4,6 @@ body {
 
 body a{
     text-decoration:none;
-    color:
 }
 
 .text_base {
@@ -98,6 +97,11 @@ body a{
 
 .left_column a{
     color: #0044CC;
+}
+
+.left_column a:hover{
+    color: #0088EE;
+
 }
 
 #ficha {
