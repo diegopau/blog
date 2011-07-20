@@ -11,7 +11,7 @@ gem 'omniauth', '0.2.6'  #para autenticacion con facebook, twitter, etc...
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO QUE HACE QUE SE JODA EL BOTON "STOP" AL QUERER PARAR EL SERVIDOR, TB DEJA DE FUNCIONAR CTRL+C, SI SIGUE PASANDO MIRAR SI ELIMINARLO O INTENTAR ACTUALIZARLO
 gem 'jquery-rails', '1.0.12'
-gem 'paperclip', '2.3.13' # para manegar archivos adjuntos, principalmente imagenes.
+gem 'paperclip', '2.3.15' # para manegar archivos adjuntos, principalmente imagenes.
 
 group :development do
   gem 'rspec-rails', '2.6.1'
