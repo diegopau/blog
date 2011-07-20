@@ -1,15 +1,24 @@
 <div class="right_column span-5 last">
+
+  <div id="ficha">
+    <div id="foto"> <%= link_to image_tag("diegopau.jpg", :width => "108px", :id => "imagen_foto"), {:controller => 'posts', :action => 'search_result', :tag => 'about_me'} %></div>
+    <div id="descripcion"> <%= link_to "About Diego Pau", {:controller => 'posts', :action => 'search_result', :tag => 'about_me'} %>  </div>
+  </div>
+
+  <br>
+
   <div id="newest_posts">
     <p> Most recent posts:</p>
-        <ul>
-            <% @last_posts.each do |post| %>
-               <li>
-                <%= link_to "#{post.title}", post_path(post) %>
-              </li>
-            <% end %>
-        </ul>
+    <ul>
+      <% @last_posts.each do |post| %>
+          <li>
+            <%= link_to "#{post.title}", post_path(post) %>
+          </li>
+      <% end %>
+    </ul>
   </div>
   <br>
+
   <div id="buscador">
 
   </div>
