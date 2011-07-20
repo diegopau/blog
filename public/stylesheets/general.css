@@ -45,10 +45,11 @@ body a{
     float: left;
     margin: 0;
     font-size: 46px;
+    padding-left:25px;
 }
 
 .cabecera_nombre h1 a{
-    color: #0026CC
+    color: #0026CC;
 }
 
 .cabecera_nombre h1 a:hover{
