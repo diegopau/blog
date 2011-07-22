@@ -17,7 +17,7 @@
 
       <div id="comments_header">
         <span id="comments_count"> <%= pluralize(@post.comments.count, "Comment") %></span>
-
+        <a name="comments_beginning"></a>
          <span id="leave_a_comment">
             <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
          </span>
