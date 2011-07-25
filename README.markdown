@@ -20,11 +20,12 @@ It uses:
 
  Intial configuration.
 
- -First you should give it some other title and logo as it is now configured for my blog :)
+ - First you should give it some other title and logo as it is now configured for my blog :)
   To register an user for RailsAdmin you have to add :registerable to admin_user.rb so it looks like this:
-         devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
 
- -Then after deploying it, if you don't want other people being able to use RailsAdmin you should (after registering an user for yourself) go back to admin_user.rb and delete :registerable.
+    devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
+
+ - Then after deploying it, if you don't want other people being able to use RailsAdmin you should (after registering an user for yourself) go back to admin_user.rb and delete :registerable.
 
 
  Let me know if I can improve it somehow!! but remember it is a work in progress ...
