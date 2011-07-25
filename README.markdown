@@ -1,4 +1,4 @@
-This is a 3 column blog I created for diegopau.com. Feel free to fork it and ask any questions. It's quite simple and a work in progress yet.
+This is a 3 column blog I created for http://diegopau.com. Feel free to fork it and ask any questions. It's quite simple and a work in progress yet.
 
 It uses:
 
@@ -16,15 +16,15 @@ It uses:
  - Create languages and asociate them to posts.
  - Filter posts by tags, languages or both.
  - Authenticate users and allow them to leave comments. They can leave comments if they are not authenticated too.
- - See diegopau.com as an example.
+ - See http://diegopau.com as an example.
 
  Intial configuration.
 
-    First you should give it some other title and logo as it is now configured for my blog :)
-    To register an user for RailsAdmin you have to add :registerable to admin_user.rb so it looks like this:
+ -First you should give it some other title and logo as it is now configured for my blog :)
+  To register an user for RailsAdmin you have to add :registerable to admin_user.rb so it looks like this:
          devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
 
-    Then after deploying it, if you don't want other people being able to use RailsAdmin you should (after registering an user for yourself) go back to admin_user.rb and delete :registerable.
+ -Then after deploying it, if you don't want other people being able to use RailsAdmin you should (after registering an user for yourself) go back to admin_user.rb and delete :registerable.
 
 
  Let me know if I can improve it somehow!! but remember it is a work in progress ...
