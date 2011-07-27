@@ -7,6 +7,7 @@ It uses:
  - The new posts are edited with the ckeditor; allowing you to format text, attach pictures or videos, etc..
  - Some jQuery for AJAX comment posting / deleting.
  - Blueprint for better CSS
+ - Truncate_html plugin to truncate posts in index page
 
  Its ready to be deployed with Heroku.
 

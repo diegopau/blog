@@ -1,7 +1,9 @@
 <div class="post">
   <div class="post_title"><h2><%= link_to "#{post.title}", post_path(post) %></h2></div>
   <div class="post_date"><%= post.created_at.to_s(:long) %></div>
-  <div class="post_body text_base"><%= post.body.html_safe %> </div>
+  <div class="post_body text_base"><%= truncate_html post.body, :length => 1000 %>
+    <p>(<%= link_to "Read More", post_path(post) %>)</p>
+  </div>
   <br>
 </div>
 <span class="comments_count"> <%= pluralize(post.comments.count, "Comment") %></span>
