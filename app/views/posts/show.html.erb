@@ -9,19 +9,28 @@
     <div class="post">
       <div class="post_title"><h2><%= link_to "#{@post.title}", post_path(@post) %></h2></div>
       <div class="post_date"><%= @post.created_at.to_s(:long) %></div>
+      <div class='share_buttons'>
+        <span class='st_sharethis' displayText='ShareThis'></span>
+        <span class='st_email' displayText='Email'></span>
+        <span class='st_plusone_hcount'></span>
+      </div>
       <div class="post_body text_base"><%= @post.body.html_safe %></div>
       <br>
     </div>
 
+
+    <a name="comments_beginning"></a>
     <div id="comments">
 
       <div id="comments_header">
         <span id="comments_count"> <%= pluralize(@post.comments.count, "Comment") %></span>
-        <a name="comments_beginning"></a>
+
          <span id="leave_a_comment">
             <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
          </span>
       </div>
+
+
 
       <%= render :partial => 'comment', :collection => @post.comments %>
 

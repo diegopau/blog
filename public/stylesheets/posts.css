@@ -27,11 +27,27 @@
 }
 
 .post_date {
-    width: 550px;
+    width: 300px;
     float: left;
     height: 25px;
+    padding-top: 10px;
     padding-bottom: 10px;
+    line-height: 20px;
 
+}
+
+.share_buttons {
+    float: left;
+    text-align: right;
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.st_plusone_hcount {
+    margin-left: 4px;
+    width: 60px;
 }
 
 .post_body{
