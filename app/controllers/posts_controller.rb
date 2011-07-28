@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
 
   def index
+    @title = "Diego Pau: The unfolding blue box"
     @last_posts = Post.order('created_at DESC').limit(10)  #se recogen los 10 posts mas recientes.
     @posts = Post.all(:order => 'created_at DESC')
     @tags = Tag.all
@@ -13,6 +14,8 @@ class PostsController < ApplicationController
   end
 
   def search_result
+    @title = "Diego Pau: The unfolding blue box"
+
     # Se realizan busquedas de parametros que no pertenecen al modelo Post, sino a modelos asociados (tags y languages) para ello se usa el metodo "joins" http://guides.rubyonrails.org/active_record_querying.html#specifying-conditions-on-the-joined-tables
     puts "entro en el search_result"
     puts "el valor de los parametros es: language = #{params[:language]} y tag = #{params[:tag]}"
@@ -50,6 +53,7 @@ class PostsController < ApplicationController
     @last_posts = Post.order('created_at DESC').limit(10) #se recogen los 10 posts mas recientes.
     @comment = Comment.new() # Se crea un comentario vacio que será el que se salve si el usuario escribe un comentario en alguno de los posts.
     @post = Post.find(params[:id])
+    @title = "The unfolding blue box: " + @post.title
     @tags = Tag.all
     respond_to do |format|
       format.html # show.html.erb

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Starting StaticAssetTest App</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajax({
+                url: '/status',
+                success: function(data) {
+                    window.location.replace('/posts')
+                }
+            });
+
+            $('#loading')
+                    .hide()
+                    .delay(1000)
+                    .fadeIn();
+        });
+    </script>
+</head>
+<body>
+<div id="loading">
+    <h1>Starting Application...</h1>
+    Please wait while the application is started...<br/>
+    Or click here if this is taking too long: <a href="/home">Home</a>
+</div>
+</body>
+</html>
