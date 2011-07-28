@@ -1,3 +1,7 @@
+#loading{
+   float:left;
+}
+
 body {
    background: url("../images/fondo.png") repeat-x scroll 0 0
 }
