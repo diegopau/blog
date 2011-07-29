@@ -1,12 +1,12 @@
 <div id="cabecera">
     <div class="cabecera_nombre span-14">
-      <h1><%= link_to "The unfolding blue box", root_path %></h1>
+      <h1><%= link_to "The unfolding blue box", posts_path %></h1>
     </div>
 
     <div class="cabecera_language span-5 last">
       <div style="float:left; width:190px; font-size:13px;"> See posts in:</div>
       <div id="english"><%= link_to "English", {:controller => 'posts', :action => 'search_result', :language => "english"} %>&nbsp;|&nbsp;</div>
       <div id="espanhol"><%= link_to "Español", {:controller => 'posts', :action => 'search_result', :language => "espanhol"} %>&nbsp;|&nbsp;</div>
-      <div id="todos"><%= link_to "Show all", root_path %></div>
+      <div id="todos"><%= link_to "Show all", posts_path %></div>
     </div>
 </div>

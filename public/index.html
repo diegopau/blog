@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Starting StaticAssetTest App</title>
+    <title>Opening The unfolding blue box</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -18,12 +18,56 @@
                     .fadeIn();
         });
     </script>
+
+    <!-- [if lt IE9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <!-- [endif] -->
+    <LINK href="stylesheets/blueprint/screen.css" rel="stylesheet" type="text/css">
+    <LINK href="stylesheets/blueprint/print.css" rel="stylesheet" type="text/css">
+    <LINK href="stylesheets/general.css" rel="stylesheet" type="text/css">
+    <LINK href="stylesheets/posts.css" rel="stylesheet" type="text/css">
+    <!-- [if lt IE 8]><LINK href="stylesheets/blueprint/ie.css" rel="stylesheet" type="text/css"><![endif] -->
+
 </head>
 <body>
-<div>
-    <h1>Starting Application...</h1>
-    Please wait while the application is started...<br/>
-    Or click here if this is taking too long: <a href="/home">Home</a>
+<div class="container">
+
+    <div class="left_column span-4">
+
+        <div id="blue_box" class="span-4">
+            <img src="images/blue_box_final.png" alt="blue_box" width="140px"/>
+        </div>
+
+    </div>
+
+
+    <div id="cabecera">
+         <div class="cabecera_nombre span-14">
+            <h1 style="color:#0026CC;">The unfolding blue box</h1>
+        </div>
+        <div class="cabecera_language span-5 last">
+            <div style="float:left; width:190px; font-size:13px;"> See posts in:</div>
+            <div id="english">English&nbsp;|&nbsp;</div>
+            <div id="espanhol">Espa&ntilde;ol</div>
+        </div>
+    </div>
+    <div class="cuerpo span-20 last">
+        <div class="posts span-14">
+            <div class="post" style="height:1000px;">
+                <div class="post_title"><h2 style="color:#0066CC;font-size: 24px;">Loading blog info, please wait ...</h2></div>
+            </div>
+        </div>
+
+        <div class="right_column span-5 last">
+
+            <div id="ficha">
+                <div id="foto">
+                    <img src="images/diegopau.jpg" id="imagen_foto" alt="diego_pau" width="108px"/>
+                </div>
+                <div id="descripcion"> About Diego Pau </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

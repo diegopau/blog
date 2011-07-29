@@ -1,7 +1,5 @@
 Blog::Application.routes.draw do
 
-  root :to => 'posts#index'
-
   match 'status' => proc { |env| [200, {}, 'Online'] }
   match '/posts', :to => 'posts#index'
 
