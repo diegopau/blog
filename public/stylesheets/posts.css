@@ -30,7 +30,6 @@
     width: 300px;
     float: left;
     height: 25px;
-    padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
 
@@ -40,7 +39,6 @@
     float: left;
     text-align: right;
     width: 250px;
-    padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
 }

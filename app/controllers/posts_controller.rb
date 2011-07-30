@@ -55,6 +55,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = "The unfolding blue box: " + @post.title
     @tags = Tag.all
+    @meta_tags = @post.tags.all
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
