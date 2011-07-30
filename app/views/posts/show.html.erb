@@ -15,6 +15,12 @@
         <span class='st_plusone_hcount'></span>
       </div>
       <div class="post_body text_base"><%= @post.body.html_safe %></div>
+      <div id="tags_list">
+        Tags:
+        <% @post.tags.each do |tag| %>
+            <%= link_to " #{tag.name}", {:controller => 'posts', :action => 'search_result', :tag => tag.name} %>
+        <% end %>
+      </div>
       <br>
     </div>
 
@@ -29,7 +35,6 @@
             <%= link_to "Leave a comment!", :action => "show", :anchor => "comment_form" %>
          </span>
       </div>
-
 
 
       <%= render :partial => 'comment', :collection => @post.comments %>

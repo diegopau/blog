@@ -2,7 +2,13 @@
   <div class="post_title"><h2><%= link_to "#{post.title}", post_path(post) %></h2></div>
   <div class="post_date"><%= post.created_at.to_s(:long) %></div>
   <div class="post_body text_base"><%= truncate_html post.body, :length => 1000 %>
-    <p>(<%= link_to "Read More", post_path(post) %>)</p>
+    <p>
+      <% if post.language.name == "english"%>
+          (<%= link_to "Read More", post_path(post) %>)
+      <% else %>
+          (<%= link_to "Leer todo", post_path(post) %>)
+      <% end %>
+    </p>
   </div>
   <br>
 </div>
@@ -11,6 +17,11 @@
      <%= link_to "Show / leave comments", post_path(post) + "#comments_beginning" %>
 </span>
 
-<%- # TODO: hay que hacer que si el post es muy largo no salga todo el post, sino solo parte de el... pero ¡cuidado con las imágenes! -%>
+<div class="tags_list">
+  Tags:
+     <% post.tags.each do |tag| %>
+        <%= link_to " #{tag.name}", {:controller => 'posts', :action => 'search_result', :tag => tag.name} %>
+    <% end %>
+</div>
 
 <div class="space_between_posts">&nbsp;</div>

@@ -60,8 +60,11 @@
 /* estos dos parametros son para el listado general de posts */
 .show_comments{
     float: left;
+    font-size:13px;
     text-align: right;
     width: 200px;
+    border-bottom: solid 1px;
+    border-color: lightgray;
 }
 .show_comments a{
    text-decoration: none;
@@ -70,6 +73,22 @@
 .comments_count{
     float: left;
     width: 350px;
+    border-bottom: solid 1px;
+    border-color: lightgray;
+
+}
+
+.tags_list{
+    float: left;
+    width: 550px;
+    text-align: right;
+}
+
+#tags_list {
+    float: left;
+    width: 550px;
+    text-align: right;
+    padding-bottom: 0;
 }
 
 
@@ -91,6 +110,8 @@
     font-size: 15px;
     float: left;
     width: 250px;
+
+
 }
 
 #leave_a_comment{
@@ -98,6 +119,7 @@
     text-align: right;
     width: 300px;
     font-size: 15px;
+
 }
 
 #leave_a_comment a{
@@ -169,8 +191,7 @@
    float: left;
    height:50px;
     width: 550px;
-    border-top:solid 1px;
-    border-color: lightgray;
+
 }
 
 .logged_with{
