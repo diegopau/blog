@@ -10,9 +10,9 @@
       <div class="post_title"><h2><%= link_to "#{@post.title}", post_path(@post) %></h2></div>
       <div class="post_date"><%= @post.created_at.to_s(:long) %></div>
       <div class='share_buttons'>
-        <span class='st_sharethis' displayText='ShareThis'></span>
-        <span class='st_email' displayText='Email'></span>
-        <span class='st_plusone_hcount'></span>
+        <span class='st_sharethis' displayText='ShareThis' st_url="<%=post_url(@post) %>" st_title="<%= @post.title %>" st_image="http://diegopau.com/images/blue_box_mini.png" st_summary="<%=get_summary(@post.body,150)%>"></span>
+        <span class='st_email' displayText='Email' st_url="<%= post_url(@post) %>" st_title="<%= @post.title %>" st_image="http://diegopau.com/images/blue_box_mini.png" st_summary="<%= get_summary(@post.body, 150) %>"></span>
+        <span class='st_plusone_hcount' st_url="<%= post_url(@post) %>" st_title="<%= @post.title %>" st_image="http://diegopau.com/images/blue_box_mini.png" st_summary="<%= get_summary(@post.body, 150) %>"></span>
       </div>
       <div class="post_body text_base"><%= @post.body.html_safe %></div>
       <div id="tags_list">

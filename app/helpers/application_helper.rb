@@ -14,4 +14,10 @@ module ApplicationHelper
     callname
   end
 
+  def get_summary(html_to_summarize, limit = 150)
+    output = strip_tags(html_to_summarize)[0..(limit-3)].concat('...')
+    puts "summary = #{output}"
+    output
+  end
+
 end
