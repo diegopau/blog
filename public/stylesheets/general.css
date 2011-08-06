@@ -258,3 +258,15 @@ body a{
     padding-left: 10px;
 }
 
+.pagination {
+    font-size: 14px;
+    float: left;
+    width: 550px;
+    text-align: right;
+    color: #666666;
+}
+
+.pagination a {
+    font-weight: bold;
+}
+

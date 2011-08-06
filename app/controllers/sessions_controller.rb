@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     self.current_user = @auth.user
 
     # Para volver a donde el usuario estaba antes de haberse logueado (obtenido de: https://github.com/intridea/omniauth/wiki/Saving-User-Location)
-    redirect_to request.env['omniauth.origin'] || '/default'
+    redirect_to request.env['omniauth.origin'] + "#comments_beginning" || '/default'
   end
 
   def destroy
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
       # Se redirecciona al post en el que se estaba gracias al parametro post_id que se le pasa.
       respond_to do |format|
-        format.html { redirect_to(post_url(params[:post_id]))}
+        format.html { redirect_to(post_url(params[:post_id]) + "#comments_beginning")}
         format.xml  { head :ok }
       end
   end

@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     @title = "Diego Pau: The unfolding blue box"
     @last_posts = Post.order('created_at DESC').limit(10)  #se recogen los 10 posts mas recientes.
-    @posts = Post.all(:order => 'created_at DESC')
+    @posts = Post.order('created_at DESC').page params[:page]
     @tags = Tag.all
     respond_to do |format|
       format.html # index.html.erb
@@ -20,19 +20,19 @@ class PostsController < ApplicationController
     puts "entro en el search_result"
     puts "el valor de los parametros es: language = #{params[:language]} y tag = #{params[:tag]}"
 
-    if (params[:tag] != nil && params[:language] != nil)  #se especifica tanto un tag como un language
+    if (params[:tag] != nil && params[:language] != nil) #se especifica tanto un tag como un language
       puts "se especifico tanto un language como un tag"
-      @posts = Post.joins(:tags).joins(:language).where(:tags => {:name => params[:tag]}, :languages => {:name => params[:language]}).order('created_at DESC')
-    elsif params[:tag] == nil  #se especifica un language
+      @posts = Post.joins(:tags).joins(:language).where(:tags => {:name => params[:tag]}, :languages => {:name => params[:language]}).order('created_at DESC').page params[:page]
+    elsif params[:tag] == nil #se especifica un language
       puts "solo se especifico language"
       # Esta otra forma de expresarlo es igualmente valida, simplemente otro formato: @posts = Post.joins(:language).where('idomas.name' => params[:language])
-      @posts = Post.joins(:language).where(:languages => {:name => params[:language]}).order('created_at DESC')    #cuidado con los PLURALES Y SINGULARES!!
-    else    #se especifica un tag
+      @posts = Post.joins(:language).where(:languages => {:name => params[:language]}).order('created_at DESC').page params[:page] #cuidado con los PLURALES Y SINGULARES!!
+    else #se especifica un tag
       puts "solo se especifico tag"
       # Es necesario hacer un joins para acceder a la informacion de los tags que pertenece a otro modelo
-      @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]}).order('created_at DESC')
-      # La que esta implementada es una manera equivalenete de hacer esto:  @posts = Post.all(:include => :tags, :conditions => ["tags.name = ?", params[:tag]]) # Es importante el :include, ya que en este caso posts has many tags.. y si no pones el include no hace la busqueda dentro de los tags tb.
-      # con la diferencia de que esta ultima es la forma vieja y menos recomendada
+      @posts = Post.joins(:tags).where(:tags => {:name => params[:tag]}).order('created_at DESC').page params[:page]
+       # La que esta implementada es una manera equivalenete de hacer esto:  @posts = Post.all(:include => :tags, :conditions => ["tags.name = ?", params[:tag]]) # Es importante el :include, ya que en este caso posts has many tags.. y si no pones el include no hace la busqueda dentro de los tags tb.
+       # con la diferencia de que esta ultima es la forma vieja y menos recomendada
     end
 
 

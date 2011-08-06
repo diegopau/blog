@@ -16,7 +16,7 @@
               <%= comment.user.name %>
            <% end %>
         <% else %>
-           <% if comment.web_page != nil %>
+           <% if comment.web_page != nil && comment.web_page != "" %>
                <%= link_to "#{comment.user_name}", "http://" + comment.web_page %>
            <% else %>
                <%= comment.user_name %>

@@ -44,7 +44,7 @@
 <%- # Este formulario envia al controlador de comments los siguientes parametros para crear un objeto tipo comment (aunque estamos en una vista perteneciente a posts form_for envia el formulario a la función create dentro del controlador de comments)):  -%>
 <%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}   -%>
 
-<%= form_for(@comment, :remote => true, :html => {:id => "comment_form"}) do |f| %>
+<%= form_for(@comment, :remote => true, :html => {:id => "comment_form_fields"}) do |f| %>
     <% if @comment.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -67,14 +67,14 @@
 
     <% if not signed_in? %>
         <div class="name_field">
-          <%= f.label :name%>:&nbsp;&nbsp;
+          <%= f.label :name%>:&nbsp;&nbsp;&nbsp;&nbsp;
           <%= f.text_field :user_name, :value => "(Required)", :onclick => 'clearField(this,".name_field input");' %>
         </div>
     <% end %>
 
     <% if not signed_in? %>
         <div class="web_page_field">
-          <%= f.label :web_page %>:&nbsp;&nbsp;
+          <%= f.label :web_page %>:&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:14px;">http://</span>
           <%= f.text_field :web_page, :value => "(Optional)", :onclick => 'clearField(this,".web_page_field input");' %>
         </div>
     <% end %>

@@ -10,7 +10,9 @@ Blog::Application.routes.draw do
   # con esto estas diciendo que: cualquier enlace que lleve al controlador posts y accion search_result va a asignares a la ruta /posts/search. Los parametros que se pasen se le añaden tb a la ruta.
   match '/posts/search', :to => 'posts#search_result'  # esta linea siempre tiene que estar antes que resources :posts para tener mas prioridad y que no se interprete search como parámetro id.
 
-  resources :posts
+  resources :posts do
+    get 'page/:page', :action => :index, :on => :collection
+  end
 
   match '/sessions', :to => 'sessions#destroy'
 

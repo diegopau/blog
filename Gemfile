@@ -16,6 +16,7 @@ gem 'paperclip', '2.3.15' # para manegar archivos adjuntos, principalmente image
 gem "nokogiri", '1.4.7'  # para el plugin truncate_html: https://github.com/ianwhite/truncate_html
 gem "htmlentities", '4.3.0' # para el plugin truncate_html: https://github.com/ianwhite/truncate_html
 
+gem 'kaminari', '0.12.4'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

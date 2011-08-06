@@ -266,13 +266,15 @@
 
 .new_comment .web_page_field{
     float: left;
-    width: 300px;
+    width: 272px;
     padding-bottom: 10px;
+    margin-right: 0px;
+    text-align:right;
 
 }
 
 .new_comment .web_page_field input {
-     width: 200px;
+     width: 150px;
      color: gray;
      font-style: italic;
 }

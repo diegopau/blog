@@ -22,7 +22,10 @@ It uses:
  Intial configuration.
 
  - First you should give it some other title and logo as it is now configured for my blog :)
-  To register an user for RailsAdmin you have to add :registerable to admin_user.rb so it looks like this:
+
+ - To be able to migrate de database you have to remove the content inside the file: /config/initializers/rails_admin.rb. Then do rake db:migrate and then put the back the content of the rails_admin.rb file.
+
+ - To register an user for RailsAdmin you have to add :registerable to admin_user.rb so it looks like this:
 
     devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable
 

@@ -8,6 +8,8 @@
 
       <%= render :partial => 'post', :collection => @posts %>
 
+     <%= paginate @posts %>
+
   </div>
 
   <%= render :partial => 'right_column' %>
