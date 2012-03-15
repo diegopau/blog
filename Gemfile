@@ -34,6 +34,8 @@ end
 
 group :production do
   gem 'geoip-rails'  # Para saber, a partir de su IP cual es el pais (o incluso ciudad) de origen de una persona
+  gem 'therubyracer-heroku'
+  gem 'pg'
 end
 
 # Use unicorn as the web server

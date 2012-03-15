@@ -1,3 +1,5 @@
+¡¡ USE: bundle --without production for develpment testing!!
+
 This is a 3 column blog I created for http://diegopau.com. Feel free to fork it and ask any questions. It's quite simple and a work in progress yet.
 
 It uses:
