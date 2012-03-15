@@ -19,5 +19,10 @@ RailsAdmin.config do |config|
       field :posts
     end
   end
+  config.model Comment do
+    list do
+          items_per_page 100
+    end
+  end
 
 end
