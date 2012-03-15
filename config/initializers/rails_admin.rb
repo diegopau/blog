@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  config.main_app_name = ["Diego Pau", "Blog"]
+  config.current_user_method { current_admin_user } #auto-generated
   config.included_models = [User, Post, Comment, Authorization, Tag, Language]
   config.model Post do
     edit do

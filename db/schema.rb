@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,56 +14,56 @@
 ActiveRecord::Schema.define(:version => 20110718133256) do
 
   create_table "admin_users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                                 :default => "", :null => false
+    t.string    "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                         :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "authorizations", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "provider"
+    t.string    "uid"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "comments", :force => true do |t|
-    t.string   "user_name"
-    t.string   "web_page"
-    t.text     "contenido"
-    t.integer  "post_id"
-    t.integer  "user_id"
-    t.datetime "published_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_url"
+    t.string    "user_name"
+    t.string    "web_page"
+    t.text      "contenido"
+    t.integer   "post_id"
+    t.integer   "user_id"
+    t.timestamp "published_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "image_url"
   end
 
   create_table "languages", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "published_at"
-    t.integer  "language_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "title"
+    t.text      "body"
+    t.timestamp "published_at"
+    t.integer   "language_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "posts_tags", :id => false, :force => true do |t|
@@ -71,32 +72,32 @@ ActiveRecord::Schema.define(:version => 20110718133256) do
   end
 
   create_table "rails_admin_histories", :force => true do |t|
-    t.string   "message"
-    t.string   "username"
-    t.integer  "item"
-    t.string   "table"
-    t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 5
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "message"
+    t.string    "username"
+    t.integer   "item"
+    t.string    "table"
+    t.integer   "month"
+    t.integer   "year"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "website"
-    t.string   "image_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "provider"
+    t.string    "name"
+    t.string    "email"
+    t.string    "website"
+    t.string    "image_url"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "provider"
   end
 
 end

@@ -4,10 +4,11 @@
     <title>Opening The unfolding blue box</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $.ajax({
+        //ESTO SOLO FUNCIONA EN PRODUCCION CON HEROKU
+       /* $(document).ready(function() {
+           $.ajax({
                 url: '/status',
-                success: function(data) {
+               success: function(data) {
                     window.location.replace('/posts')
                 }
             });
@@ -16,7 +17,7 @@
                     .hide()
                     .delay(50)
                     .fadeIn();
-        });
+        });    */
     </script>
 
     <!-- [if lt IE9]>

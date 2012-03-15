@@ -72,6 +72,8 @@ es:
       error: "%{name} no se pudo %{action} correctamente"
       noaction: "No se realizó ninguna acción"
     actions:
+      index:
+        title: "loquesea" #corrige un bug en la traducción del titulo...
       create: "crear"
       created: "creado"
       update: "actualizar"

@@ -1,26 +1,31 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.8'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', '1.3.3'
-gem 'rake', '0.9.2'
-gem 'omniauth', '0.2.6'  #para autenticacion con facebook, twitter, etc...
+gem 'sqlite3'
+gem 'rake'
+
+gem 'omniauth'  #para autenticacion con facebook, twitter, etc...
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO QUE HACE QUE SE JODA EL BOTON "STOP" AL QUERER PARAR EL SERVIDOR, TB DEJA DE FUNCIONAR CTRL+C, SI SIGUE PASANDO MIRAR SI ELIMINARLO O INTENTAR ACTUALIZARLO
-gem 'jquery-rails', '1.0.12'
+gem 'jquery-rails'
 gem 'paperclip', '2.3.15' # para manegar archivos adjuntos, principalmente imagenes.
 
 gem "nokogiri", '1.4.7'  # para el plugin truncate_html: https://github.com/ianwhite/truncate_html
 gem "htmlentities", '4.3.0' # para el plugin truncate_html: https://github.com/ianwhite/truncate_html
 
-gem 'kaminari', '0.12.4'
+gem 'kaminari'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
-  gem 'annotate-models', '1.0.4' #se ejecuta annotate nombre_modelo y le mete en el modelo información sobre la tabla de la base de datos que representa
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git' #se ejecuta annotate nombre_modelo y le mete en el modelo información sobre la tabla de la base de datos que representa
 end
 
 group :test do
