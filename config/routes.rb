@@ -1,8 +1,6 @@
 Blog::Application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
   devise_for :admin_users
-  
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #esto no funciona en modo development!!!
   #match 'status' => proc { |env| [200, {}, 'Online'] }
