@@ -1,12 +1,13 @@
 # -*- encoding : utf-8 -*-
 Blog::Application.routes.draw do
-  match 'status' => proc { |env| [200, {}, 'Online'] }
-  devise_for :admin_users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #esto no funciona en modo development!!!
+  match 'status' => proc { |env| [200, {}, 'Online'] }
   match '/posts', :to => 'posts#index'
   resources :comments
+
+  devise_for :admin_users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   # con esto estas diciendo que: cualquier enlace que lleve al controlador posts y accion search_result va a asignares a la ruta /posts/search. Los parametros que se pasen se le añaden tb a la ruta.
   match '/posts/search', :to => 'posts#search_result'  # esta linea siempre tiene que estar antes que resources :posts para tener mas prioridad y que no se interprete search como parámetro id.
