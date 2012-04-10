@@ -4,7 +4,7 @@ Blog::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #esto no funciona en modo development!!!
-  #match 'status' => proc { |env| [200, {}, 'Online'] }
+  match 'status' => proc { |env| [200, {}, 'Online'] }
   match '/posts', :to => 'posts#index'
   resources :comments
 
