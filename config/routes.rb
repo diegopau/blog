@@ -1,10 +1,10 @@
 # -*- encoding : utf-8 -*-
 Blog::Application.routes.draw do
+  match 'status' => proc { |env| [200, {}, 'Online'] }
   devise_for :admin_users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #esto no funciona en modo development!!!
-  match 'status' => proc { |env| [200, {}, 'Online'] }
   match '/posts', :to => 'posts#index'
   resources :comments
 
