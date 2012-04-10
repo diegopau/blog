@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Blog::Application.routes.draw do
   devise_for :admin_users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

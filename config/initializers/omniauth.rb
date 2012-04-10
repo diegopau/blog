@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :twitter, '91kXnXdh8QQxUMwucVyq5A', '2oglRbuepl0ThhZtuifDomvrA5xS3hP7iBI0JvZqC4'
   provider :facebook, '212245775478437', '832c0e6ec78587ce1677bd5a4762b733'

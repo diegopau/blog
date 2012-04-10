@@ -1,0 +1,272 @@
+#loading{
+   float:left;
+}
+
+body {
+   background: url("../images/fondo.png") repeat-x scroll 0 0
+}
+
+body a{
+    text-decoration:none;
+}
+
+.text_base {
+    /* Tamaño y formato basico del texto del blog */
+    font-size: 14px;
+}
+
+#cabecera{
+    float:left;
+}
+
+.cabecera_nombre {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    height: 50px;
+    border-width: 1px;
+    border-color: lightgray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+#blue_box {
+    float: left;
+    text-align: center;
+    padding-top:10px;
+    margin-bottom:20px;
+}
+
+#blue_box img:hover{
+    opacity:0.8;
+}
+
+.cabecera_nombre h1{
+    float: left;
+    margin: 0;
+    font-size: 46px;
+    padding-left:25px;
+}
+
+.cabecera_nombre h1 a{
+    color: #0026CC;
+}
+
+.cabecera_nombre h1 a:hover{
+    color:  #0066FF
+ }
+
+.cabecera_language{
+    float: left;
+    height: 50px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.cabecera_language a{
+    color: #0044CC
+}
+
+.cabecera_language a:hover{
+    color: #0088EE
+}
+
+.cabecera_language #english{
+    float:left;
+    padding-left:5px;
+}
+
+.cabecera_language #espanhol{
+    float: left;
+
+}
+
+.cabecera_language #todos{
+    float: left;
+
+}
+
+.cabecera h1 {
+    margin: 0;
+    text-align: left;
+    padding-left: 5px;
+
+}
+
+.cabecera h1 a{
+    color:black;
+     text-decoration: none;
+}
+
+.cabecera h1 a:hover{
+    color:blue;
+}
+
+.cuerpo {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    background-color: #FFF;
+}
+
+.left_column{
+
+}
+
+.left_column a{
+    color: #0044CC;
+}
+
+.left_column a:hover{
+    color: #0088EE;
+}
+
+#ficha {
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+#descripcion {
+    font-size: 13px;
+}
+
+#descripcion a{
+    text-decoration: none;
+}
+
+#foto {
+}
+
+#imagen_foto {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+}
+
+#tags {
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#tags p{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#tags ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 0;
+    margin: 0;
+    font-size: 13px;
+
+}
+
+#tags ul a{
+    text-decoration: none;
+}
+
+#tags li{
+    padding-top: 0px;
+    padding-right:0px;
+
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+    background-color: #EFFBFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #D0FFCF;
+    border-width: 1px;
+}
+
+#tags li a{
+    display:block; /* Esto hace que el enlace ocupe toda la casilla li en la que se encuentra */
+    padding-left: 5px;
+    padding-right: 4px;
+    border-radius: 10px;
+}
+
+#tags li a:hover{
+    color: white;
+    background-color: #0066CC;
+}
+
+#tags li:hover{
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.selected_tag {
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+.right_column a{
+
+    color: #0044CC;
+}
+
+.right_column a:hover{
+    color: #0088EE;
+}
+
+#newest_posts{
+
+}
+
+#newest_posts p{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#newest_posts ul {
+    list-style-type: none;
+    padding-top: 4px;
+    padding-left: 5px;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 12px;
+    background-color: #EFFBFF;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #D0FFCF;
+    border-width: 1px;
+
+}
+
+#newest_posts li{
+    padding-bottom: 5px;
+}
+
+#newest_posts li a{
+    display: block;
+}
+
+#buscador {
+    padding-left: 10px;
+}
+
+#archivo {
+    padding-left: 10px;
+}
+
+.pagination {
+    font-size: 14px;
+    float: left;
+    width: 550px;
+    text-align: right;
+    color: #666666;
+}
+
+.pagination a {
+    font-weight: bold;
+}
+

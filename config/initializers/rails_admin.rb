@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 RailsAdmin.config do |config|
   config.main_app_name = ["Diego Pau", "Blog"]
   config.current_user_method { current_admin_user } #auto-generated

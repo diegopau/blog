@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "rexml/parsers/pullparser"
 
 module TruncateHtmlHelper

@@ -1,3 +1,11 @@
+.error_explanation{
+    float:left;
+    height: 20px;
+    font-style:bold;
+    font-size:14px;
+    color:red;
+}
+
 .posts{
     padding-left: 15px;
     padding-right: 25px;

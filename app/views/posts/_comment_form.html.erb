@@ -24,6 +24,7 @@
 <a name="comment_form"></a>
 
 
+
 <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
 
@@ -45,8 +46,20 @@
 <%- # "comment"=>{"post_id"=>"1", "user_name"=>"juanito", "web_page"=>"pepito", "contenido"=>"una chorrada"}, "commit"=>"Post Comment"}   -%>
 
 <%= form_for(@comment, :remote => true, :html => {:id => "comment_form_fields"}) do |f| %>
+
+    <% puts("Error en el post: #{@post.error_message}") %>
+
+    <% if @post.error_message!="" && @post.error_message!=nil %>
+       <div class="error_explanation">
+          <%= "Error!!: " + @post.error_message %>
+          <% puts("Error message= #{@post.error_message}") %>
+           <% @post.error_message="" %>
+           <% @post.save! %>
+       </div>
+    <% end %>
+
     <% if @comment.errors.any? %>
-        <div id="error_explanation">
+        <div>
           <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
           <ul>
@@ -83,6 +96,8 @@
       <%= f.text_area :contenido, :value => "Write here your comment.", :onclick => 'clearField(this,".comment_field textarea");' %>
     </div>
 
+    <%= recaptcha_tags %>
+    <br>
     <div class="submit_button">
       <%= f.submit "Post Comment" %>
     </div>

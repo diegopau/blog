@@ -46,6 +46,7 @@
     <div id="comment_form">
       <%- # AQUI LE PASO AL PARCIAL ENCARGADO DE INTRODUCIR NUEVOS COMENTARIOS LA VARIABLE local post      -%>
       <%= render :partial => 'comment_form', :locals => {:post => @post.id} %>
+      <%- #se saca error al crear un comentario o se dice "Thanks for commenting! si no hubo problemas."  -%>
     </div>
 
 

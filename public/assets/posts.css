@@ -1,0 +1,319 @@
+.error_explanation{
+    float:left;
+    height: 30px;
+    width: 490px;
+    font-weight:bold;
+    font-size:14px;
+    color:red;
+}
+
+.posts{
+    padding-left: 15px;
+    padding-right: 25px;
+    min-height: 50px; /* soluciona un problema que habia cuando no habia ninguna post que resultar tras una busqueda */
+}
+
+
+.post {
+    float:left;
+    margin-bottom:10px;
+}
+
+.post h2{
+    margin: 0;
+    color: black;
+}
+
+.post h2 a{
+    text-decoration: none;
+}
+
+.post_title{
+    width: 550px;
+    float: left;
+    height: 40px;
+
+}
+
+.post_date {
+    width: 300px;
+    float: left;
+    height: 25px;
+    padding-bottom: 10px;
+    line-height: 20px;
+
+}
+
+.share_buttons {
+    float: left;
+    text-align: right;
+    width: 250px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.st_plusone_hcount {
+    margin-left: 4px;
+    width: 60px;
+}
+
+.post_body{
+    width: 550px;
+    float: left;
+
+}
+
+
+/* estos dos parametros son para el listado general de posts */
+.show_comments{
+    float: left;
+    font-size:13px;
+    text-align: right;
+    width: 200px;
+    border-bottom: solid 1px;
+    border-color: lightgray;
+}
+.show_comments a{
+   text-decoration: none;
+}
+
+.comments_count{
+    float: left;
+    width: 350px;
+    border-bottom: solid 1px;
+    border-color: lightgray;
+
+}
+
+.tags_list{
+    float: left;
+    width: 550px;
+    text-align: right;
+}
+
+#tags_list {
+    float: left;
+    width: 550px;
+    text-align: right;
+    padding-bottom: 0;
+}
+
+
+#comments{
+    width: 550px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#comments_header{
+    float: left;
+    padding-bottom: 0;
+    border-color: lightgray;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+
+#comments_count{
+    font-size: 15px;
+    float: left;
+    width: 250px;
+
+
+}
+
+#leave_a_comment{
+    float: left;
+    text-align: right;
+    width: 300px;
+    font-size: 15px;
+
+}
+
+#leave_a_comment a{
+    text-decoration: none;
+}
+
+.comment{
+  float:left;
+  width:500px;
+  margin-left:15px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+  padding-left:5px;
+  padding-right:10px;
+  border-color: lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment p{
+    margin: 0;
+}
+
+.dateandoptions{
+    float:left;
+    width: 220px;
+    text-align: right;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dateandoptions a{
+    text-decoration: none;
+}
+
+.comment_owner{
+    float:left;
+    width:200px;
+    font-size: 16px;
+    line-height: 16px;
+     margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment_owner a{
+    text-decoration: none;
+}
+
+.comment_picture{
+    float: left;
+    margin: 5px;
+    padding-right: 15px;
+}
+
+.comment_picture img{
+    padding: 1px;
+    border: 1px solid lightgray;
+}
+
+.comment_content{
+    float:left;
+    width: 420px;
+    font-size:13px;
+}
+
+.space_between_posts{
+   float: left;
+   height:50px;
+    width: 550px;
+
+}
+
+.logged_with{
+    float: left;
+    padding-left: 20px;
+    font-size: 13px;
+
+}
+
+.logged_with a{
+    text-decoration: none;
+}
+
+.providers_buttons {
+    width: 550px;
+    float:left;
+    height: 35px;
+}
+
+.autenticate_con{
+    padding-top: 4px;
+    padding-left: 20px;
+      float:left;
+      font-size: 15px;
+      width: 120px;
+
+}
+
+.provider_button{
+    float:left;
+    width: 40px;
+    height: 35px;
+}
+
+.provider_button img{    /* Esto es para el efecto de que se muevan los iconitos */
+     padding-top:2px;
+}
+
+.provider_button img:hover{
+    padding-top:0;
+
+}
+
+#comment_form {
+    float: left;
+    padding-bottom:20px;
+}
+
+ #comment_form h3{
+     margin-bottom: 10px;
+ }
+
+.new_comment{
+    float:left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.new_comment .name_field{
+    float:left;
+    width: 230px;
+    padding-bottom: 10px;
+}
+
+.new_comment .name_field label{
+}
+
+.new_comment .name_field input{
+    width: 150px;
+    color: gray;
+    font-style: italic;
+
+}
+
+.new_comment .web_page_field{
+    float: left;
+    width: 272px;
+    padding-bottom: 10px;
+    margin-right: 0px;
+    text-align:right;
+
+}
+
+.new_comment .web_page_field input {
+     width: 150px;
+     color: gray;
+     font-style: italic;
+}
+
+.new_comment .comment_field{
+    float: left;
+    padding-bottom: 15px;
+}
+
+.new_comment .comment_field label{
+    float: left;
+}
+
+.new_comment .comment_field textarea {
+    float: left;
+    height: 100px;
+    width: 490px;
+    padding: 5px;
+    color: gray;
+    font-style: italic;
+}
+
+.new_comment .submit_button{
+    float: left;
+}
+
+.notificacion_de_comentario{
+    float: left;
+}
+
+.notice{
+    float:left;
+}

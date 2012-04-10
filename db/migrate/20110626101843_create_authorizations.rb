@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateAuthorizations < ActiveRecord::Migration
   def self.up
     create_table :authorizations do |t|

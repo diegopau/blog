@@ -7,15 +7,31 @@ gem 'rails'
 
 gem 'sqlite3'
 gem 'rake'
+gem 'magic_encoding'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer'
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
 
 gem 'omniauth'  #para autenticacion con facebook, twitter, etc...
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
 
+gem "recaptcha", :require => "recaptcha/rails"
+
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git' #ESTO ES LO QUE HACE QUE SE JODA EL BOTON "STOP" AL QUERER PARAR EL SERVIDOR, TB DEJA DE FUNCIONAR CTRL+C, SI SIGUE PASANDO MIRAR SI ELIMINARLO O INTENTAR ACTUALIZARLO
-gem 'jquery-rails'
 gem 'paperclip', '2.3.15' # para manegar archivos adjuntos, principalmente imagenes.
 
 gem "nokogiri", '1.4.7'  # para el plugin truncate_html: https://github.com/ianwhite/truncate_html

@@ -1,5 +1,7 @@
 <%-#  -%>
-<div id="comment_<%=comment.id%>" class="comment">
+
+<% if comment.created_at!=nil %>
+    <div id="comment_<%=comment.id%>" class="comment">
       <div class="comment_picture">
         <% if comment.user != nil && comment.user.image_url != nil %>
             <%= image_tag "#{comment.user.image_url}", :width => "50px" %>
@@ -34,7 +36,10 @@
     </span>
 
 
-  <div class = "comment_content">
-      <%= content_tag(:p, comment.contenido, :class => "comment-body") %>
-  </div>
+     <div class = "comment_content">
+       <%= content_tag(:p, comment.contenido, :class => "comment-body") %>
+     </div>
+
 </div>
+
+<% end %>
