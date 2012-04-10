@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 Blog::Application.routes.draw do
 
-  match :root , :to => 'posts#index'
+  root :to => 'posts#index'
   match '/posts', :to => 'posts#index'
   resources :comments
 
