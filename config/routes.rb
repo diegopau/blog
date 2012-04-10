@@ -1,8 +1,7 @@
 # -*- encoding : utf-8 -*-
 Blog::Application.routes.draw do
 
-  #esto no funciona en modo development!!!
-  match 'status' => proc { |env| [200, {}, 'Online'] }
+  match :root , :to => 'posts#index'
   match '/posts', :to => 'posts#index'
   resources :comments
 
