@@ -16,6 +16,8 @@
     }
 </script>
 
+
+
 <h3>
   Introduce un comentario:
 </h3>
@@ -23,7 +25,15 @@
 <%- #esto es un anchor, como un bookmark dentro de una pagina  -%>
 <a name="comment_form"></a>
 
-
+<% if @post.error_message!="" && @post.error_message!=nil %>
+       <div class="error_explanation">
+         Error with captcha, refresh it and try again!
+          <% puts("Error message= #{@post.error_message}") %>
+           <% @post.error_message="" %>
+           <% @post.save! %>
+         <% puts("Error message2= #{@post.error_message}") %>
+       </div>
+    <% end %>
 
 <%- # Opciones para loguearse con otros servicios o para introducir comentario como usuario anonimo  -%>
 
@@ -49,14 +59,7 @@
 
     <% puts("Error en el post: #{@post.error_message}") %>
 
-    <% if @post.error_message!="" && @post.error_message!=nil %>
-       <div class="error_explanation">
-          <%= "Error!!: " + @post.error_message %>
-          <% puts("Error message= #{@post.error_message}") %>
-           <% @post.error_message="" %>
-           <% @post.save! %>
-       </div>
-    <% end %>
+
 
     <% if @comment.errors.any? %>
         <div>

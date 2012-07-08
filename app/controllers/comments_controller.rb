@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
       @post.save
       puts "Error añadido: #{@post.error_message}"
       respond_to do |format|
-        format.html {redirect_to(@comment.post,:anchor => "comment_form")}
+        format.html {redirect_to(@comment.post,:anchor => "comment_form", :notice => 'Feedback was successfully updated.')}
       end
     end
   end
